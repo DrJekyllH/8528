@@ -14,13 +14,13 @@
         }
         .content{
             text-align:left;
-            width: 600px;
-word-wrap: break-word;
+            width: 450px;
+            word-wrap: break-word;
         }
         #header{
             display: flex;
             text-align:center;
-            width: 600px;
+
         }
         .menu{
             display: flex;
