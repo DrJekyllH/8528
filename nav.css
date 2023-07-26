@@ -1,0 +1,16 @@
+#nav{
+   list-style: none;
+display: flex;
+}
+
+#nav li {
+  width: 140px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2px;
+}
+
+.is-current a {
+  color: pink;
+} 

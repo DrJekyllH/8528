@@ -9,19 +9,70 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.8528.space/style.css">
+
+	<!-- splide.js cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+	<!-- splide.css cdn -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+	<link rel="stylesheet" href="https://www.8528.space/slideshow.css">
+
+	<link rel="stylesheet" href="https://www.8528.space/nav.css">
 </head>
 <body>
-<div id="header">
-<div class="menu">[Home]</div>
-<div class="menu">[<a href="about.html">About</a>]</div>
-<div class="menu">[<a href="terms.html">Terms</a>]</div>
-<div class="menu">[<a href="entry.html">Entry</a>]</div>
+<header id="header">
+  <h2 class="header-logo"><a class="js-header-nav-link" href="index.html">
+<span class="logo-box">📦</span><span class="logo-piyo1">🐣</span>
+</a></h2>
+  <nav>
+    <ul id="nav">
+      <li><a class="js-header-nav-link" href="about.html">ABOUT</a></li>
+      <li><a class="js-header-nav-link" href="streams.html">STREAMS</a></li>
+      <li><a class="js-header-nav-link" href="terms.html">TERMS</a></li>
+      <li><a class="js-header-nav-link" href="entry.html">ENTRY</a></li>
+    </ul>
+  </nav>
+<script>
+const headerNavLink = document.querySelectorAll('.js-header-nav-link');
+
+headerNavLink.forEach((targetLink) => {
+  if (targetLink.href === location.href) {
+  targetLink.parentElement.classList.add('is-current');
+  }
+});
+</script>
+</header>
+<h1 class="title">箱庭プロジェクト（仮）📦🐣🐥<span class="pi">pi</span></h1>
+<div class="splide">
+  <div class="splide__track">
+		<div class="splide__list">
+			<div class="splide__slide"><div class="item"><a href="entry.html"><img class="slide-image" src="https://www.8528.space/images/slide1.png"></a></div></div>
+			<div class="splide__slide"><div class="item"><a href="entry.html"><img class="slide-image"  src="https://www.8528.space/images/slide2.png"></a></div></div>
+			<div class="splide__slide"><div class="item"><a href="entry.html"><img class="slide-image"  src="https://www.8528.space/images/slide3.png"></a></div></div>
+			<div class="splide__slide"><div class="item"><a href="entry.html"><img class="slide-image"  src="https://www.8528.space/images/slide4.png"></a></div></div>
+		</div>
+  </div>
 </div>
-<h1 class="title">箱庭プロジェクト（仮）📦🐣🐥</h1>
-<div class="twitter-area">
-<blockquote class="twitter-tweet" data-width="300px" data-height="500px" data-lang="ja">
-<div class="loader"></div>
-<a href="https://twitter.com/DrJekyllsLab/status/1682965367008944128?ref_src=twsrc%5Etfw"></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+
+    <div class="discord-area">
+        <discord-widget id="1115122759832453221" width="350px" height="490px" footerText="Placeholder" color="#5865f2" backgroundColor="#0c0c0d" textColor="#ffffff" statusColor="#858585"></discord-widget>
+<script async src="discordwidget.js"></script>
+    </div>
+<script>
+const options = {
+  perMove: 1, 
+  gap: 1,
+  cover: true,
+  heightRatio: 0.5,
+  updateOnMove: true,
+  type: 'loop',
+  focus:'center',
+  autoplay: true,
+  interval: 5000,
+  fixedWidth: '860px',
+}
+
+const splide = new Splide( '.splide',options );
+splide.mount();
+</script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+.splide__track{
+    height: 480px;
+}
+
+.splide{
+    width: 100%;
+}
+
+.slide-image{
+    height: 480px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}

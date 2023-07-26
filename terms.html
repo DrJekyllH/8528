@@ -9,15 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.8528.space/style.css">
+    <link rel="stylesheet" href="https://www.8528.space/nav.css">
 </head>
 <body>
-<div id="header">
-<div class="menu">[<a href="index.html">Home</a>]</div>
-<div class="menu">[<a href="./about.html">About</a>]</div>
-<div class="menu">[Terms]</div>
-<div class="menu">[<a href="entry.html">Entry</a>]</div>
-</div>
-<h1 class="title">箱庭プロジェクト（仮）📦🐣🐥</h1>
+<header id="header">
+  <h2 class="header-logo"><a class="js-header-nav-link" href="index.html">
+<span class="logo-box">📦</span><span class="logo-piyo1">🐣</span>
+</a></h2>
+  <nav>
+    <ul id="nav">
+      <li><a class="js-header-nav-link" href="about.html">ABOUT</a></li>
+      <li><a class="js-header-nav-link" href="streams.html">STREAMS</a></li>
+      <li><a class="js-header-nav-link" href="terms.html">TERMS</a></li>
+      <li><a class="js-header-nav-link" href="entry.html">ENTRY</a></li>
+    </ul>
+  </nav>
+<script>
+const headerNavLink = document.querySelectorAll('.js-header-nav-link');
+
+headerNavLink.forEach((targetLink) => {
+  if (targetLink.href === location.href) {
+  targetLink.parentElement.classList.add('is-current');
+  }
+});
+</script>
+</header>
 <h2>規約</h2>
 <p class="content">
 <b>＜Minecraft利用規約＞</b><br>
