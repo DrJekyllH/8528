@@ -31,11 +31,15 @@ h2	{
 		width: 450px;
 		word-wrap: break-word;
 	}
+	.home-main{
+		word-wrap: break-word;
+	}
 	#header{
 		display: flex;
 		flex-direction: row; 
 		text-align:center;
 		justify-content: center;
+        height:30rem;
 	}
 	.menu{
 		display: flex;
@@ -43,40 +47,35 @@ h2	{
 		text-align:center;
 		justify-content: center;
 		align-items: center;
-        margin-left: 0px;
+        margin-left: 10px;
         margin-right: 10px;
 	}
 	}
 	.header-logo{
 		display: flex;
-		flex-direction: row; 
-		text-align:left;
-		justify-content: left;
-		align-items: left;
-        margin-left: 10px;
-        margin-right: 10px;
+        font-size: 28rem;
 	}
     .pi{
-  vertical-align: top;
-  display: inline;
+        vertical-align: top;
+        display: inline;
         font-size: 8rem;
     }
 
     a .logo-piyo1{
-display: none;
+        display: none;
     }
-a:hover .logo-box{
-display:none;
-}
-a:hover .logo-piyo1{
-display:inline;
-}
+    a:hover .logo-box{
+        display:none;
+    }
+    a:hover .logo-piyo1{
+        display:inline;
+    }
 
 	a {
 		color: black;
 		text-decoration: none;
 	}
-	a:hover {
+	.nav-item:hover{
 		background-color: gray;
 		color: white;
 	}

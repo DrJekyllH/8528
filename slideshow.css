@@ -1,14 +1,16 @@
 .splide__track{
-    height: 480px;
+    max-width: 100vw;
 }
 
 .splide{
-    width: 100%;
+    width: 100vw;
 }
 
 .slide-image{
-    height: 480px;
+    width: 50vw;
+    object-fit: cover;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     border-radius:10px;
+box-shadow: 7rem 0 3rem 0 rgba(0,0,0,.3);
 }

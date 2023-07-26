@@ -20,15 +20,13 @@
 </head>
 <body>
 <header id="header">
-  <h2 class="header-logo"><a class="js-header-nav-link" href="index.html">
-<span class="logo-box">📦</span><span class="logo-piyo1">🐣</span>
-</a></h2>
   <nav>
     <ul id="nav">
-      <li><a class="js-header-nav-link" href="about.html">ABOUT</a></li>
-      <li><a class="js-header-nav-link" href="streams.html">STREAMS</a></li>
-      <li><a class="js-header-nav-link" href="terms.html">TERMS</a></li>
-      <li><a class="js-header-nav-link" href="entry.html">ENTRY</a></li>
+      <li><a class="js-header-nav-link nav-logo" href="index.html"><span class="logo-box">📦</span><span class="logo-piyo1">🐣</span></a></li>
+      <li><a class="js-header-nav-link nav-item" href="about.html">ABOUT</a></li>
+      <li><a class="js-header-nav-link nav-item" href="streams.html">STREAMS</a></li>
+      <li><a class="js-header-nav-link nav-item" href="terms.html">TERMS</a></li>
+      <li><a class="js-header-nav-link nav-item" href="entry.html">ENTRY</a></li>
     </ul>
   </nav>
 <script>
@@ -41,14 +39,16 @@ headerNavLink.forEach((targetLink) => {
 });
 </script>
 </header>
+<div class="name">
 <h1 class="title">箱庭プロジェクト（仮）📦🐣🐥<span class="pi">pi</span></h1>
+</div>
 <div class="splide">
   <div class="splide__track">
 		<div class="splide__list">
-			<div class="splide__slide"><div class="item"><a href="entry.html"><img class="slide-image" src="https://www.8528.space/images/slide1.PNG"></a></div></div>
-			<div class="splide__slide"><div class="item"><a href="entry.html"><img class="slide-image"  src="https://www.8528.space/images/slide2.PNG"></a></div></div>
-			<div class="splide__slide"><div class="item"><a href="entry.html"><img class="slide-image"  src="https://www.8528.space/images/slide3.PNG"></a></div></div>
-			<div class="splide__slide"><div class="item"><a href="entry.html"><img class="slide-image"  src="https://www.8528.space/images/slide4.PNG"></a></div></div>
+			<div class="splide__slide"><a href="entry.html"><img class="slide-image" src="https://www.8528.space/images/slide1.PNG"></a></div>
+			<div class="splide__slide"><a href="entry.html"><img class="slide-image" src="https://www.8528.space/images/slide2.PNG"></a></div>
+			<div class="splide__slide"><a href="entry.html"><img class="slide-image" src="https://www.8528.space/images/slide3.PNG"></a></div>
+			<div class="splide__slide"><a href="entry.html"><img class="slide-image" src="https://www.8528.space/images/slide4.PNG"></a></div>
 		</div>
   </div>
 </div>
@@ -57,22 +57,25 @@ headerNavLink.forEach((targetLink) => {
         <discord-widget id="1115122759832453221" width="350px" height="490px" footerText="Placeholder" color="#5865f2" backgroundColor="#0c0c0d" textColor="#ffffff" statusColor="#858585"></discord-widget>
 <script async src="discordwidget.js"></script>
     </div>
+
 <script>
 const options = {
   perMove: 1, 
-  gap: 1,
-  cover: true,
-  heightRatio: 0.5,
+  gap: 20,
+  autoWidth: true,
+  autoHeight: true,
+
   updateOnMove: true,
   type: 'loop',
   focus:'center',
   autoplay: true,
   interval: 5000,
-  fixedWidth: '860px',
+
 }
 
 const splide = new Splide( '.splide',options );
 splide.mount();
 </script>
+
 </body>
 </html>
