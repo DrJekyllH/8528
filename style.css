@@ -24,7 +24,9 @@ h2	{
     .content{
         width: 450px;
     }
-
+    .logo{
+        margin-left:40rem;
+    }
 }
 @media (max-width: 769px)	{
     .pc-nav{
@@ -35,6 +37,10 @@ h2	{
     }
     .spacer{
         display: none;
+    }
+    .logo{
+        margin-left:auto;
+        margin-right: auto;
     }
 }
 	body{
@@ -216,7 +222,6 @@ width:20%;
     }
 
 	.logo{
-        margin-left: 40rem;
         margin-top: 0rem;
         font-size: 40rem;
         white-space: nowrap;
