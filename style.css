@@ -89,7 +89,7 @@ h2	{
 
 
 	header{
-        width: 90vw;
+        width: 100vw;
         height: 60px;
 		display: flex;
 		flex-direction: row; 
@@ -98,9 +98,11 @@ h2	{
 	}
 
 .pc-nav {
-  width: 100%;
+  width: 80%;
 }
-
+.spacer{
+width:20%;
+}
 /* 変更箇所はコメントの項目のみ */
 .sp-nav-content {
   width: 100%;
@@ -204,15 +206,23 @@ h2	{
         margin-right: 10px;
 	}
 
-	.header-logo{
-		display: flex;
-        font-size: 28rem;
-	}
     .pi{
         vertical-align: top;
         display: inline;
         font-size: 8rem;
     }
+
+	.logo{
+        margin-left: 40rem;
+        margin-top: 0rem;
+        font-size: 40rem;
+        white-space: nowrap;
+        width:10%;
+	}
+    .logo-name{
+        font-size: 20rem;
+        font-weight: bold;
+}
 
     a .logo-piyo1{
         display: none;
