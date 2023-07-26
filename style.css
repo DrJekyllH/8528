@@ -21,11 +21,17 @@ h2	{
     .sp-nav{
         display: none;
     }
+    .content{
+        width: 450px;
+    }
 
 }
 @media (max-width: 769px)	{
     .pc-nav{
         display: none;
+    }
+    .content{
+        width: 90vw;
     }
 }
 	body{
@@ -43,26 +49,26 @@ h2	{
 		margin-right: auto;
 	}
 	.content{
-		text-align:left;
-		width: 450px;
-		word-wrap: break-word;
+
 	}
 	.home-main{
 		word-wrap: break-word;
 	}
+
+
+
 	header{
-        width: 100vw;
+        width: 90vw;
         height: 60px;
 		display: flex;
 		flex-direction: row; 
 		text-align:center;
 		justify-content: center;
 	}
+
 .pc-nav {
   width: 100%;
 }
-
-
 
 /* 変更箇所はコメントの項目のみ */
 .sp-nav-content {
