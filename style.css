@@ -11,6 +11,9 @@ h2	{
 	html	{
 		font-size: 6.25%;
 	}
+    .content{
+    width: 100vw;
+    }
 }
 	body{
 		display: flex;
@@ -35,6 +38,7 @@ h2	{
 		word-wrap: break-word;
 	}
 	#header{
+        width: 100vw;
 		display: flex;
 		flex-direction: row; 
 		text-align:center;
