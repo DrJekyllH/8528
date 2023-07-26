@@ -56,6 +56,37 @@ h2	{
 	}
 
 
+/* pi吹き出し */
+.balloon-left-btm {
+  vertical-align:top;
+  margin-top: -9rem;
+  margin-left: -4rem;
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  height: 20rem;
+  line-height: 20rem;
+  text-align: center;
+  color: #000;
+  font-size: 10rem;
+  background: #a58eff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.balloon-left-btm:before {
+  content: "";
+  position: absolute;
+  bottom: -4rem;
+  left: -4rem;
+  margin-top: -9rem;
+  border: 5rem solid transparent;
+  border-left: 5rem solid #a58eff;
+  z-index: 0;
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+}
+
 
 	header{
         width: 90vw;
