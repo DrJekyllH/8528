@@ -6,11 +6,25 @@
     width: 100vw;
 }
 
+
+
+@media (min-width: 770px)	{
 .slide-image{
     width: 50vw;
     object-fit: cover;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     border-radius:10px;
-box-shadow: 7rem 0 3rem 0 rgba(0,0,0,.3);
+
+}
+}
+@media (max-width: 769px)	{
+.slide-image{
+    width: 80vw;
+    object-fit: cover;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+
+}
 }

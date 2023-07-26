@@ -7,15 +7,25 @@ body	{
 h2	{
 	font-size: 28rem;
 }
-h1 {
-    font-size: 36rem;
-}
-@media only screen and (min-width: 769px)	{
+    h1  {
+        font-size: 20rem;
+    }
+
+@media (min-width: 770px)	{
 	html	{
 		font-size: 6.25%;
 	}
-    h1  {
-        font-size: 20rem;
+    h1 {
+        font-size: 36rem;
+    }
+    .sp-nav{
+        display: none;
+    }
+
+}
+@media (max-width: 769px)	{
+    .pc-nav{
+        display: none;
     }
 }
 	body{
@@ -40,13 +50,113 @@ h1 {
 	.home-main{
 		word-wrap: break-word;
 	}
-	#header{
+	header{
         width: 100vw;
+        height: 60px;
 		display: flex;
 		flex-direction: row; 
 		text-align:center;
 		justify-content: center;
 	}
+.pc-nav {
+  width: 100%;
+}
+
+
+
+/* 変更箇所はコメントの項目のみ */
+.sp-nav-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+
+  /* 普段は画面外にするために左端を画面右端の位置にする */
+  left: 100%;
+
+  z-index: 90;
+  background-color: #cccccc;
+  
+  /* 右端からゆっくり移動するように表示 */
+  transition: all 0.5s;
+}
+
+
+* スマホ用メニュー */
+
+/* スマホ用メニューのリスト */
+.sp-nav-list {
+  padding: 70px 10px 0;
+}
+/* スマホ用メニュー項目 */
+.sp-nav-item {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+/* スマホ用メニュー項目のリンク */
+.sp-nav-link {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+}
+
+.sp-nav-box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.sp-nav-box span,
+.sp-nav-box span:before,
+.sp-nav-box span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #cccccc;
+  position: absolute;
+}
+.sp-nav-box span:before {
+  bottom: 8px;
+}
+.sp-nav-box span:after {
+  top: 8px;
+}
+#sp-nav-check {
+  display: none;
+}
+#sp-nav-check:checked ~ .sp-nav-box span {
+  background: rgba(255, 255, 255, 0);
+}
+#sp-nav-check:checked ~ .sp-nav-box span::before {
+  bottom: 0;
+  background: #ffffff;
+  transform: rotate(45deg);
+}
+#sp-nav-check:checked ~ .sp-nav-box span::after {
+  top: 0;
+  background: #ffffff;
+  transform: rotate(-45deg);
+}
+#sp-nav-check:checked ~ .sp-nav-content {
+  left: 0;
+}
+/* ハンバーガーボタンを押してチェックがONの時だけ
+   スマホ用メニューを画面左端に移動する */
+#sp-nav-check:checked ~ .sp-nav-content {
+  left: 0;
+}
+
 	.menu{
 		display: flex;
 		flex-direction: row; 
@@ -56,7 +166,7 @@ h1 {
         margin-left: 10px;
         margin-right: 10px;
 	}
-	}
+
 	.header-logo{
 		display: flex;
         font-size: 28rem;

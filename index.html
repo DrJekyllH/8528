@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.8528.space/style.css">
+    <link rel="stylesheet" href="style.css">
 
 	<!-- splide.js cdn -->
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -20,8 +20,11 @@
 </head>
 <body>
 <header id="header">
+<div class="logo">
+<a class="js-header-nav-link nav-logo" href="index.html"><span class="logo-box">📦</span><span class="logo-piyo1">🐣</span></a>
+</div>
+<div class="pc-nav">
     <ul id="nav">
-      <li><a class="js-header-nav-link nav-logo" href="index.html"><span class="logo-box">📦</span><span class="logo-piyo1">🐣</span></a></li>
       <li><a class="js-header-nav-link nav-item" href="about.html">ABOUT</a></li>
       <li><a class="js-header-nav-link nav-item" href="streams.html">STREAMS</a></li>
       <li><a class="js-header-nav-link nav-item" href="terms.html">TERMS</a></li>
@@ -36,6 +39,30 @@ headerNavLink.forEach((targetLink) => {
   }
 });
 </script>
+</div>
+<div class="sp-nav">
+      <input type="checkbox" id="sp-nav-check">
+      <label for="sp-nav-check" class="sp-nav-box">
+        <span></span>
+      </label>
+      <div class="sp-nav-content">
+        <ul class="sp-nav-list">
+          <li class="sp-nav-item">
+            <a class="sp-nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="sp-nav-item">
+            <a class="sp-nav-link" href="streams.html">STREAMS</a>
+          </li>
+          <li class="sp-nav-item">
+            <a class="sp-nav-link" href="terms.html">TERMS</a>
+          </li>
+          <li class="sp-nav-item">
+            <a class="sp-nav-link" href="entry.html">ENTRY</a>
+          </li>
+        </ul>
+      </div>
+</div>
+
 </header>
 <div class="name">
 <h1 class="title">箱庭プロジェクト（仮）📦🐣🐥<span class="pi">pi</span></h1>
