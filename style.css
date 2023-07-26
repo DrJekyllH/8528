@@ -7,12 +7,15 @@ body	{
 h2	{
 	font-size: 28rem;
 }
+h1 {
+    font-size: 36rem;
+}
 @media only screen and (min-width: 769px)	{
 	html	{
 		font-size: 6.25%;
 	}
-    .content{
-    width: 100vw;
+    h1  {
+        font-size: 20rem;
     }
 }
 	body{
@@ -22,7 +25,7 @@ h2	{
 		align-items: center;
 		font-family: 'Noto Sans JP', sans-serif;
 	}
-	.title{
+	h1{
 		justify-content: center;
 		stext-align: center;
 		align-items: center;
