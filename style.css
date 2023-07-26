@@ -39,7 +39,6 @@ h2	{
 		flex-direction: row; 
 		text-align:center;
 		justify-content: center;
-        height:30rem;
 	}
 	.menu{
 		display: flex;
