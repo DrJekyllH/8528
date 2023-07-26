@@ -33,6 +33,9 @@ h2	{
     .content{
         width: 90vw;
     }
+    .spacer{
+        display: none;
+    }
 }
 	body{
 		display: flex;
