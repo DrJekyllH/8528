@@ -1,0 +1,25 @@
+.qa-008 dt {
+    margin-bottom: 1em;
+    color: #333333;
+    font-weight: 600;
+}
+
+.qa-008 dt::before,
+.qa-008 dd::before {
+    margin-right: .4em;
+}
+
+.qa-008 dt::before {
+    content: "Q.";
+}
+
+.qa-008 dd {
+    margin: 0 0 2.5em;
+    padding: 1em 1.5em;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+.qa-008 dd::before {
+    content: "A.";
+}
