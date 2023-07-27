@@ -5,6 +5,8 @@
    justify-content: center;
    vertical-align:bottom;
    align-items: center;
+   padding-left: auto;
+   padding-right: auto;
 }
 
 #nav li {
