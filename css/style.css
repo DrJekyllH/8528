@@ -46,7 +46,7 @@ h2	{
 	body{
 		display: flex;
 		flex-direction: column; 
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		font-family: 'Noto Sans JP', sans-serif;
 	}
@@ -101,8 +101,10 @@ h2	{
         width: 100vw;
         height: 60px;
 		display: flex;
-		flex-direction: row; 
-		text-align:center;
+		flex-direction: row;
+		justify-content: space-between;
+        align-items: center;
+		text-align: center;
 	}
 
 .pc-nav {
