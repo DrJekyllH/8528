@@ -46,8 +46,8 @@ h2	{
 	body{
 		display: flex;
 		flex-direction: column; 
-		justify-content: center;
-		align-items: start;
+		justify-content: space-between;
+		align-items: center;
 		font-family: 'Noto Sans JP', sans-serif;
 	}
 	h1{
@@ -103,7 +103,6 @@ h2	{
 		display: flex;
 		flex-direction: row; 
 		text-align:center;
-		justify-content: space-between;
 	}
 
 .pc-nav {
