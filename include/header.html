@@ -3,11 +3,22 @@
 </div>
 <div class="pc-nav">
     <ul id="nav">
+      <li><a class="js-header-nav-link nav-item" href="index.html">HOME</a></li>
       <li><a class="js-header-nav-link nav-item" href="about.html">ABOUT</a></li>
       <li><a class="js-header-nav-link nav-item" href="streams.html">STREAMS</a></li>
       <li><a class="js-header-nav-link nav-item" href="terms.html">TERMS</a></li>
       <li><a class="js-header-nav-link nav-item" href="entry.html">ENTRY</a></li>
     </ul>
+<script>
+const headerNavLink = document.querySelectorAll('.js-header-nav-link');
+
+headerNavLink.forEach((targetLink) => {
+  if (targetLink.href === location.href) {
+console.log(targetLink.href +"   "+ location.href);
+  targetLink.parentElement.classList.add('is-current');
+  }
+});
+</script>
 </div>
 <div class="spacer"></div>
 <div class="sp-nav">
