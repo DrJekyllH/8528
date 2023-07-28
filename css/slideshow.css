@@ -1,9 +1,9 @@
 .splide__track{
-    max-width: 100vw;
+    max-width: 90vw;
 }
 
 .splide{
-    width: 100vw;
+    width: 90vw;
 }
 
 
@@ -12,19 +12,58 @@
 .slide-image{
     width: 50vw;
     object-fit: cover;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    border-radius:10px;
-
 }
+.video-thumbnail{
+    width: 347px;
+    height: 182px;
+	object-fit: cover;
+}
+.video-title{
+width: 340px;
+}
+.video-channel{
+width: 340px;
+font-size: 14rem;
+}
+
+
 }
 @media (max-width: 769px)	{
 .slide-image{
     width: 80vw;
     object-fit: cover;
+}
+.video-thumbnail{
+    width: 347px;
+    height: 182px;
+	object-fit: cover;
+
+}
+.video-title{
+width: 340px;
+}
+.video-channel{
+width: 347px;
+}
+}
+
+.slide-image{
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     border-radius:10px;
-
 }
+.video-thumbnail{
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}
+.video-title{
+word-wrap: break-word;
+}
+.video-channel{
+word-wrap: break-word;
+color: #999;
+}
+.video-channel a{
+color: #999 !important;
 }
