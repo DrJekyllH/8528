@@ -1,3 +1,13 @@
+onload = async () =>{
+
+fetch("include/header.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("#header").innerHTML = data;
+  });
+/*
 const includeHeader = new XMLHttpRequest();
 includeHeader.open("GET", "include/header.html", true);
 includeHeader.onreadystatechange = function () {
@@ -14,3 +24,5 @@ includeHeader.onreadystatechange = function () {
   }
 };
 includeHeader.send();
+*/
+}
