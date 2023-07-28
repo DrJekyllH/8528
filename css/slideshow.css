@@ -1,14 +1,18 @@
 .splide__track{
-    max-width: 90vw;
+    max-width: 100vw;
 }
 
 .splide{
-    width: 90vw;
+    width: 100vw;
 }
 
 
 
 @media (min-width: 770px)	{
+.live, .upcoming, .video, .shorts{
+
+    width: 90vw;
+}
 .slide-image{
     width: 50vw;
     object-fit: cover;
