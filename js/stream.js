@@ -1,4 +1,4 @@
-onload = async () => {
+//onload = async () => {
 //    const res = await fetch("https://www.youtube.com/@nomuranimu2nd");
 //console.log(res);
     var urlformat = "https://www.youtube.com/watch?v="
@@ -79,7 +79,4 @@ shorts_pi.innerHTML = '🐤';
     }
     request.send();
 
-
-
-
-}
+//}
