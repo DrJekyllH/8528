@@ -48,9 +48,9 @@ var title_alt = elm.title;
 if(elm.title.length> 48) elm.title = elm.title.substr(0,46) + '…';
 
            var div = document.createElement('div');
-           div.className = 'splide__slide test';
+           div.className = 'splide__slide';
            div.innerHTML = `
-<a href="` +urlformat  + elm.vid + `" target="_blank" rel="noopener noreferrer" title="` +title_alt+ `">
+<a href="` +urlformat  + elm.vid + `" class="video-link" target="_blank" rel="noopener noreferrer" title="` +title_alt+ `">
 <img class="video-thumbnail" src="` + elm.turl + `"><br>
 <div class="video-title">` + elm.title + `</div></a>
 <div class="video-channel"><a href="` + elm.curl + `" target="_blank" rel="noopener noreferrer">` + elm.name +  `</a><span style="margin-left:10rem;">` + elm.time + `</span></div>
