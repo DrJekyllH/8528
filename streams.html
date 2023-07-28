@@ -8,16 +8,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+	<!-- splide.css cdn -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://www.8528.space/css/style.css">
 	<link rel="stylesheet" href="https://www.8528.space/css/nav.css">
     <script src="js/include.js"></script>
+	<link rel="stylesheet" href="https://www.8528.space/css/slideshow.css">
+    <script src="js/youtube.js"></script>
 </head>
 <body>
 <header id="header">
 </header>
 <h2>配信情報</h2>
 <div class="content">
-Comming soon...?
+プロジェクトに参加しているVtuberさんのYoutubeでの過去24時間の活動が表示されます。
 </div>
+<hr width="30px">
+<p>🔴配信中！
+<div class="splide live">
+  <div class="splide__track">
+		<div class="splide__list">
+		</div>
+  </div>
+</div><span id="live-pi"></span>
+<hr width="30px">
+</p>
+<p>
+配信予定
+<div class="splide upcoming">
+  <div class="splide__track">
+		<div class="splide__list">
+		</div>
+  </div>
+</div><span id="upcoming-pi"></span>
+<hr width="30px">
+</p>
+<p>
+投稿動画・アーカイブ
+<div class="splide video">
+  <div class="splide__track">
+		<div class="splide__list">
+		</div>
+  </div>
+</div><span id="video-pi"></span>
+<hr width="30px">
+</p>
+<p>
+ショート
+<div class="splide shorts">
+  <div class="splide__track">
+		<div class="splide__list">
+		</div>
+  </div>
+</div><span id="shorts-pi"></span>
+</p>
 </body>
 </html>
