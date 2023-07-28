@@ -1,4 +1,4 @@
-onload = async () =>{
+//onload = async () =>{
 /*
 fetch("include/header.html")
   .then(response => {
@@ -9,7 +9,7 @@ fetch("include/header.html")
   });
 */
 const includeHeader = new XMLHttpRequest();
-includeHeader.open("GET", "include/header.html");
+includeHeader.open("GET", "include/header.html", true);
 includeHeader.onreadystatechange = function () {
   if (includeHeader.readyState === 4 && includeHeader.status === 200) {
     const headerHTML = includeHeader.responseText;
@@ -25,4 +25,4 @@ includeHeader.onreadystatechange = function () {
 };
 includeHeader.send();
 
-}
+//}
