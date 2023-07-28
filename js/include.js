@@ -1,5 +1,5 @@
 onload = async () =>{
-
+/*
 fetch("include/header.html")
   .then(response => {
     return response.text()
@@ -7,9 +7,9 @@ fetch("include/header.html")
   .then(data => {
     document.querySelector("#header").innerHTML = data;
   });
-/*
+*/
 const includeHeader = new XMLHttpRequest();
-includeHeader.open("GET", "include/header.html", true);
+includeHeader.open("GET", "include/header.html");
 includeHeader.onreadystatechange = function () {
   if (includeHeader.readyState === 4 && includeHeader.status === 200) {
     const headerHTML = includeHeader.responseText;
@@ -24,5 +24,5 @@ includeHeader.onreadystatechange = function () {
   }
 };
 includeHeader.send();
-*/
+
 }
