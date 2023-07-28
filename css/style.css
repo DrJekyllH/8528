@@ -222,14 +222,15 @@ width:10%;
         font-size: 8rem;
     }
 
-	.logo{
+.logo{
+	text-align: left;
         margin-top: 0rem;
         font-size: 40rem;
         white-space: nowrap;
         width:10%;
-	}
-    .logo-name{
-        font-size: 20rem;
+}
+.logo-name{
+	font-size: 20rem;
         font-weight: bold;
 }
 
