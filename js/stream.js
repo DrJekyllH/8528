@@ -25,7 +25,7 @@ onload = async () => {
     let video = document.getElementsByClassName('splide video')[0].getElementsByClassName('splide__track')[0].getElementsByClassName('splide__list')[0];
     let shorts = document.getElementsByClassName('splide shorts')[0].getElementsByClassName('splide__track')[0].getElementsByClassName('splide__list')[0];
     var request = new XMLHttpRequest();
-    request.open('GET', 'https://api.8528.space/stream.php', true);
+    request.open('GET', 'https://api.8528.space/stream.php?m=getstatus', true);
     request.onload = function() {
         var data = JSON.parse(this.response);
 
