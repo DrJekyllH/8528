@@ -2,8 +2,7 @@ onload = async () => {
 
     const includeHeader = new XMLHttpRequest();
     includeHeader.open("GET", "include/header.html", true);
-    includeHeader.onreadystatechange = function() {
-        if (includeHeader.readyState === 4 && includeHeader.status === 200) {
+    includeHeader.onload = function() {    
             const headerHTML = includeHeader.responseText;
             const header = document.querySelector("#header");
             header.insertAdjacentHTML("afterbegin", headerHTML);
@@ -12,8 +11,7 @@ onload = async () => {
                 if (targetLink.href === location.href) {
                     targetLink.parentElement.classList.add('is-current');
                 }
-            });
-        }
+            });     
     };
     includeHeader.send();
 
@@ -74,7 +72,7 @@ onload = async () => {
             div.className = 'splide__slide';
             div.innerHTML = `
 <div class="` + cont_class + `">
-<a href="` + urlformat + elm.vid + `" class="video-link" target="_blank" rel="noopener noreferrer" title="` + title_alt + `">
+<a href="` + urlformat + elm.vid + `" class="video-link" target="_blank" rel="noopener" title="` + title_alt + `">
 <img class="` + img_class + `" src="` + elm.turl + `"><br>
 <div class="video-title">` + elm.title + `</div></a>
 <div class="video-channel"><a href="` + elm.curl + `" target="_blank" rel="noopener noreferrer">` + plf_icon + ` ` + elm.name + `</a><span style="margin-left:10rem;">` + elm.time + `</span></div>
