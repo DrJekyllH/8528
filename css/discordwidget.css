@@ -1,0 +1,9 @@
+#discord{
+    background-color: #7289da;
+    color: #ffffff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 0 10rem 0 10rem;
+    margin: 3rem;
+}
