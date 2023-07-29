@@ -57,6 +57,29 @@ h2	{
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+    #toppage-video{
+width: 50%;
+margin: 3rem;
+text-align: center;
+}
+
+    #news{
+width:100%;
+		display: flex;
+		flex-direction: row; 
+		justify-content: center;
+		align-items: center;
+        flex-wrap: wrap;
+
+}
+#discord{
+    margin: 3rem;
+}
+#tweet{
+    margin: 3rem;
+}
+
 	.content{
 
 	}
@@ -222,15 +245,15 @@ width:10%;
         font-size: 8rem;
     }
 
-.logo{
-	text-align: left;
+	.logo{
+        text-align: left;
         margin-top: 0rem;
         font-size: 40rem;
         white-space: nowrap;
         width:10%;
-}
-.logo-name{
-	font-size: 20rem;
+	}
+    .logo-name{
+        font-size: 20rem;
         font-weight: bold;
 }
 
@@ -255,6 +278,10 @@ width:10%;
 	}
 	a:visited {
 
+	}
+
+	.entry-form-link:hover{
+		text-decoration: underline;
 	}
 
 .nav-item::after {
