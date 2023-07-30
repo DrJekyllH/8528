@@ -4,12 +4,7 @@ html	{
 body	{
 	font-size: 16rem;
 }
-h2	{
-	font-size: 28rem;
-}
-    h1  {
-        font-size: 20rem;
-    }
+
 
 @media (min-width: 770px)	{
 	html	{
@@ -17,6 +12,9 @@ h2	{
 	}
     h1 {
         font-size: 36rem;
+    }
+    h2 {
+        font-size: 28rem;
     }
     .sp-nav{
         display: none;
@@ -50,7 +48,11 @@ h2	{
 		align-items: center;
 		font-family: 'Noto Sans JP', sans-serif;
 	}
+h2	{
+	font-size: 16rem;
+}
 	h1{
+        font-size: 20rem;
 		justify-content: center;
 		text-align: center;
 		align-items: center;
