@@ -116,6 +116,7 @@ h2 {
 }
 
 .video-title {
+  width: 384px;
   word-wrap: break-word;
   text-align: left;
 }
