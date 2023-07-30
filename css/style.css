@@ -80,6 +80,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Noto Sans JP', sans-serif;
+  padding-top: 70px;
 }
 
 
@@ -205,13 +206,17 @@ h2 {
 
 
 header {
+  position: fixed;
+  top:0;
+  left:0;
   width: 100%;
   height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: rgba(255,255,255,0.5);
 }
 
 .pc-nav {
@@ -219,7 +224,7 @@ header {
 }
 
 .spacer {
-  width: 10%;
+
 }
 
 /* 変更箇所はコメントの項目のみ */
@@ -347,7 +352,7 @@ header {
   margin-top: 0rem;
   font-size: 40rem;
   white-space: nowrap;
-  width: 10%;
+
 }
 
 .logo-name {
