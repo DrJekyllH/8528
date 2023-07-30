@@ -35,7 +35,7 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
   }
 
   .logo {
-
+    width: 200px;
   }
 
   .pickup-video-thumnail {
@@ -224,7 +224,7 @@ header {
 }
 
 .spacer {
-  width: 10%;
+  width: 200px;
 }
 
 /* 変更箇所はコメントの項目のみ */
