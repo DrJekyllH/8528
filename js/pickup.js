@@ -30,7 +30,6 @@ switch (data[0].status) {
 var title_alt = data[0].title;
 if (data[0].title.length > 48) data[0].title = data[0].title.substr(0, 46) + '…';
 
-console.log(data[0]);
 let player = document.getElementById('player');
 player.innerHTML = `
 <a href="` + urlformat + data[0].vid + `" class="video-link" target="_blank" rel="noopener" title="` + title_alt + `">
