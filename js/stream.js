@@ -75,7 +75,7 @@ onload = async () => {
 <a href="` + urlformat + elm.vid + `" class="video-link" target="_blank" rel="noopener" title="` + title_alt + `">
 <img class="` + img_class + `" src="` + elm.turl + `"><br>
 <div class="video-title">` + elm.title + `</div></a>
-<div class="video-channel"><a href="` + elm.curl + `" target="_blank" rel="noopener noreferrer">` + plf_icon + ` ` + elm.name + `</a><span style="margin-left:10rem;">` + elm.time + `</span></div>
+<div class="video-channel"><a href="` + elm.curl + `" target="_blank" rel="noopener noreferrer">` + plf_icon + ` ` + elm.name + `</a><span style="margin-left:10rem;">更新: ` + elm.time + `</span></div>
 </div>`;
             parentbox.appendChild(div);
         });
