@@ -6,7 +6,8 @@ body {
   font-size: 16rem;
   overflow: scroll;
   -ms-overflow-style: none;    /* IE, Edge 対応 */
-  scrollbar-width: none; 
+  scrollbar-width: none;
+  padding-top: 70px; 
 }
 body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
   display:none;
@@ -80,7 +81,6 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Noto Sans JP', sans-serif;
-  padding-top: 70px;
 }
 
 
