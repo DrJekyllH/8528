@@ -33,14 +33,14 @@ onload = async () => {
             switch (elm.status) {
                 case "upcoming":
                     var parentbox = upcoming;
-                    var plf_icon = "";
+                    var plf_icon = '<i class="fa-brands fa-youtube"></i>';
                     img_class = "video-thumbnail";
                     cont_class = "video-container";
                     urlformat = "https://www.youtube.com/watch?v=";
                     break;
                 case "shorts":
                     var parentbox = shorts;
-                    var plf_icon = "";
+                    var plf_icon = '<i class="fa-brands fa-youtube"></i>';
                     img_class = "shorts-thumbnail";
                     cont_class = "shorts-container";
                     urlformat = "https://www.youtube.com/shorts/";
@@ -60,7 +60,7 @@ onload = async () => {
                 case "none":
                 default:
                     var parentbox = video;
-                    var plf_icon = "";
+                    var plf_icon = '<i class="fa-brands fa-youtube"></i>';
                     img_class = "video-thumbnail";
                     cont_class = "video-container";
                     urlformat = "https://www.youtube.com/watch?v=";
