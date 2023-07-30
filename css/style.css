@@ -38,7 +38,7 @@ body {
     height: 216px;
   }
   .news-child {
-    width: 50%;
+
     height: 100%;
   }
 }
@@ -79,12 +79,16 @@ body {
 
 
 h1 {
-  font-size: 20rem;
+  font-size: 24rem;
   justify-content: center;
   text-align: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+h2 {
+  font-size: 20rem;
 }
 
 #pickup-video {
@@ -120,9 +124,9 @@ h1 {
 #news {
   width: 100%;
   display: flex;
+  align-items: stretch;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   vertical-align:top;
 }
