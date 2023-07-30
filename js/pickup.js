@@ -21,7 +21,7 @@ switch (data[0].status) {
 		break;
 	case "none":
 	default:
-		var plf_icon = '<i class="fa-brands fa-youtube"></i>';
+		var plf_icon = '<i class="fa-brands fa-youtube style="color: #ff0000;"></i>';
 		img_class = "video-thumbnail";
 		cont_class = "video-container";
 		urlformat = "https://www.youtube.com/watch?v=";
