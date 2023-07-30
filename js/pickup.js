@@ -12,10 +12,10 @@ switch (data[0].status) {
 		img_class = "video-thumbnail";
 		cont_class = "video-container";
 		if (data[0].platform == "Twitch") {
-			var plf_icon = '<i class="fa-brands fa-twitch"></i>';
+			var plf_icon = '<i class="fa-brands fa-twitch" style="color: #402950;"></i>';
 			urlformat = "https://www.twitch.tv/";
 		} else {
-			var plf_icon = '<i class="fa-brands fa-youtube"></i>';
+			var plf_icon = '<i class="fa-brands fa-youtube" style="color: #ff0000;"></i>';
 			urlformat = "https://www.youtube.com/watch?v=";
 		}
 		break;
