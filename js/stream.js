@@ -16,7 +16,6 @@ onload = async () => {
                 }
             });     
     };
-    includeHeader.send();
 
 const includeFooter = new XMLHttpRequest();
 includeFooter.open("GET", "include/footer.html", true);
@@ -27,6 +26,8 @@ includeFooter.onreadystatechange = function () {
     footer.insertAdjacentHTML("afterbegin", footerHTML);
   }
 };
+
+includeHeader.send();
 includeFooter.send();
 
     //    const res = await fetch("https://www.youtube.com/@nomuranimu2nd");
