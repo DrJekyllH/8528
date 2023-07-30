@@ -200,18 +200,16 @@ h2 {
 
 
 header {
-  width: 100vw;
+  width: 100%;
   height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 
 .pc-nav {
-  display:flex;
-  align-items: stretch;
   width: 80%;
 }
 
@@ -340,8 +338,6 @@ header {
 }
 
 .logo {
-  display:flex;
-  align-items: stretch;
   text-align: left;
   margin-top: 0rem;
   font-size: 40rem;
