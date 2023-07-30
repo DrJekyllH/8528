@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  margin: 0px;
   font-size: 16rem;
   overflow: scroll;
   -ms-overflow-style: none;    /* IE, Edge 対応 */
@@ -220,9 +221,11 @@ header {
 }
 
 footer{
+  margin: 10px 0px 0px 0px;
   width: 100%;
   height:60px;
-  background-color: gray;
+  background-color: #dcdcdc;
+  color: #000000;
   text-align: center;
 }
 
