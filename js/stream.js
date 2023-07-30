@@ -33,14 +33,14 @@ onload = async () => {
             switch (elm.status) {
                 case "upcoming":
                     var parentbox = upcoming;
-                    var plf_icon = '<i class="fa-brands fa-youtube"></i>';
+                    var plf_icon = '<i class="fa-brands fa-youtube" style="color: #ff0000;"></i>';
                     img_class = "video-thumbnail";
                     cont_class = "video-container";
                     urlformat = "https://www.youtube.com/watch?v=";
                     break;
                 case "shorts":
                     var parentbox = shorts;
-                    var plf_icon = '<i class="fa-brands fa-youtube"></i>';
+                    var plf_icon = '<i class="fa-brands fa-youtube" style="color: #ff0000;"></i>';
                     img_class = "shorts-thumbnail";
                     cont_class = "shorts-container";
                     urlformat = "https://www.youtube.com/shorts/";
@@ -50,7 +50,7 @@ onload = async () => {
                     img_class = "video-thumbnail";
                     cont_class = "video-container";
                     if (elm.platform == "Twitch") {
-                        var plf_icon = '<i class="fa-brands fa-twitch"></i>';
+                        var plf_icon = '<i class="fa-brands fa-twitch" style="color: #402950;"></i>';
                         urlformat = "https://www.twitch.tv/";
                     } else {
                         var plf_icon = '<i class="fa-brands fa-youtube"></i>';
@@ -60,7 +60,7 @@ onload = async () => {
                 case "none":
                 default:
                     var parentbox = video;
-                    var plf_icon = '<i class="fa-brands fa-youtube"></i>';
+                    var plf_icon = '<i class="fa-brands fa-youtube" style="color: #ff0000;"></i>';
                     img_class = "video-thumbnail";
                     cont_class = "video-container";
                     urlformat = "https://www.youtube.com/watch?v=";
