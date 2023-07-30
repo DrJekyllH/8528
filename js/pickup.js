@@ -5,7 +5,6 @@ var cont_class = "video-container";
 const request = fetch('https://api.8528.space/stream.php?p=1')
 .then(response=> response.json())
 .then(data=>{
-console.log(data);
 
 switch (data[0].status) {
 	case "live":
