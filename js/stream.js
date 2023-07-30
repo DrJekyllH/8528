@@ -1,5 +1,8 @@
 onload = async () => {
 
+    const loader = document.getElementById('loader');
+    loader.classList.add('loaded');
+
     const includeHeader = new XMLHttpRequest();
     includeHeader.open("GET", "include/header.html", true);
     includeHeader.onload = function() {    
@@ -14,6 +17,17 @@ onload = async () => {
             });     
     };
     includeHeader.send();
+
+const includeFooter = new XMLHttpRequest();
+includeFooter.open("GET", "include/footer.html", true);
+includeFooter.onreadystatechange = function () {
+  if (includeFooter.readyState === 4 && includeFooter.status === 200) {
+    const footerHTML = includeFooter.responseText;
+    const footer = document.querySelector("#footer");
+    footer.insertAdjacentHTML("afterbegin", footerHTML);
+  }
+};
+includeFooter.send();
 
     //    const res = await fetch("https://www.youtube.com/@nomuranimu2nd");
     //console.log(res);
