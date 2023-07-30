@@ -3,71 +3,32 @@ onload = async () => {
     const loader = document.getElementById('loader');
     loader.classList.add('loaded');
 
-let header = getElementById('header');
-header.innerHTML = `
-<div class="logo">
-<a class="nav-logo" href="index.html"><span class="logo-box">📦</span><span class="logo-piyo1">🐣</span><span class="logo-name">#8528p</span></a>
-</div>
-<div class="pc-nav">
-    <ul id="nav">
-      <li><a class="js-header-nav-link nav-item" href="index.html">HOME</a></li>
-      <li><a class="js-header-nav-link nav-item" href="about.html">ABOUT</a></li>
-      <li><a class="js-header-nav-link nav-item" href="streams.html">STREAMS</a></li>
-      <li><a class="js-header-nav-link nav-item" href="faq.html">FAQ</a></li>
-      <li><a class="js-header-nav-link nav-item" href="terms.html">TERMS</a></li>
-      <li><a class="js-header-nav-link nav-item" href="entry.html">ENTRY</a></li>
-    </ul>
-<script>
-const headerNavLink = document.querySelectorAll('.js-header-nav-link');
-
-headerNavLink.forEach((targetLink) => {
-  if (targetLink.href === location.href) {
-console.log(targetLink.href +"   "+ location.href);
-  targetLink.parentElement.classList.add('is-current');
-  }
-});
-</script>
-</div>
-<div class="sp-nav">
-      <input type="checkbox" id="sp-nav-check">
-      <label for="sp-nav-check" class="sp-nav-box">
-        <span></span>
-      </label>
-      <div class="sp-nav-content">
-        <ul class="sp-nav-list">
-          <li class="sp-nav-item">
-            <a class="sp-nav-link" href="index.html">HOME</a>
-          </li>
-          <li class="sp-nav-item">
-            <a class="sp-nav-link" href="about.html">ABOUT</a>
-          </li>
-          <li class="sp-nav-item">
-            <a class="sp-nav-link" href="streams.html">STREAMS</a>
-          </li>
-          <li class="sp-nav-item">
-            <a class="sp-nav-link" href="faq.html">FAQ</a>
-          </li>
-          <li class="sp-nav-item">
-            <a class="sp-nav-link" href="terms.html">TERMS</a>
-          </li>
-          <li class="sp-nav-item">
-            <a class="sp-nav-link" href="entry.html">ENTRY</a>
-          </li>
-        </ul>
-      </div>
-</div>
-<div class="spacer">
-</div>
-`;
-
-let footer = getElementById('footer');
-footer.innerHTML = `
-<div id="footer">
-運営： ジキル博士の研究室
-</div>
-`;
+    const includeHeader = new XMLHttpRequest();
+    includeHeader.open("GET", "include/header.html", true);
+    includeHeader.onload = function() {    
+            const headerHTML = includeHeader.responseText;
+            const header = document.querySelector("#header");
+            header.insertAdjacentHTML("afterbegin", headerHTML);
+            const headerNavLink = document.querySelectorAll('.js-header-nav-link');
+            headerNavLink.forEach((targetLink) => {
+                if (targetLink.href === location.href) {
+                    targetLink.parentElement.classList.add('is-current');
+                }
+            });     
+    };
 
 includeHeader.send();
+
+const includeFooter = new XMLHttpRequest();
+includeFooter.open("GET", "include/footer.html", true);
+includeFooter.onreadystatechange = function () {
+  if (includeFooter.readyState === 4 && includeFooter.status === 200) {
+    const footerHTML = includeFooter.responseText;
+    const footer = document.querySelector("#footer");
+    footer.insertAdjacentHTML("afterbegin", footerHTML);
+  }
+};
+
 includeFooter.send();
 
     //    const res = await fetch("https://www.youtube.com/@nomuranimu2nd");
