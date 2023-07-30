@@ -210,6 +210,8 @@ header {
 }
 
 .pc-nav {
+  display:flex;
+  align-items: stretch;
   width: 80%;
 }
 
@@ -338,6 +340,8 @@ header {
 }
 
 .logo {
+  display:flex;
+  align-items: stretch;
   text-align: left;
   margin-top: 0rem;
   font-size: 40rem;
