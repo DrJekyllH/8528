@@ -13,11 +13,25 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://www.8528.space/css/style.css">
 	<link rel="stylesheet" href="https://www.8528.space/css/nav.css">
-	<link rel="stylesheet" href="css/slideshow.css">
+	<link rel="stylesheet" href="https://www.8528.space/css/slideshow.css">
     <script src="js/stream.js"></script>
     <script src="https://kit.fontawesome.com/2ca48b5450.js" crossorigin="anonymous"></script>
-</head>
-<body>
+<script>
+window.onload = ()=>{
+    const loader = document.getElementById('loader');
+    loader.classList.add('loaded');
+}
+</script>
+  </head>
+  <body>
+    <div id="loader">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
 <header id="header">
 </header>
 <h2>配信情報</h2>
@@ -63,5 +77,7 @@
   </div>
 </div><span id="shorts-pi"></span>
 </p>
+    <footer>
+    </footer>
 </body>
 </html>

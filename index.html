@@ -19,8 +19,22 @@
     <link rel="stylesheet" href="https://www.8528.space/css/discordwidget.css">
     <script src="js/pickup.js"></script>
     <script src="js/include.js"></script>
+<script>
+window.onload = ()=>{
+    const loader = document.getElementById('loader');
+    loader.classList.add('loaded');
+}
+</script>
   </head>
   <body>
+    <div id="loader">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
     <header id="header"></header>
     <div class="name">
       <h1 class="title">箱庭プロジェクト（仮）📦🐣🐥
@@ -54,6 +68,10 @@
       </div>
     </div>
     <hr width="30rem">
+    <div>
+      <a href="entry.html" class='entry-form-link'><i class="fa-solid fa-file-pen fa-bounce"></i>参加したい方はこちら！</a>
+    </div>
+    <hr width="30rem">
     <div id="news">
       <div class="news-child">
         <div id="pickup-video">
@@ -77,6 +95,8 @@
       <div id="discord"></div>
       <script async src="js/discordapi.js"></script>
     </div>
+    <footer>
+    </footer>
     <script>
 
 const options = {
