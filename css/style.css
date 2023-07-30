@@ -13,7 +13,7 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
   display:none;
 }
 
-@media (min-width: 770px) {
+@media (min-width: 850px) {
   html {
     font-size: 6.25%;
   }
@@ -49,7 +49,7 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 849px) {
   .pc-nav {
     display: none;
   }
@@ -217,6 +217,13 @@ header {
   text-align: center;
   background-color: #ffffff;
   z-index:10;
+}
+
+footer{
+  width: 100%;
+  height:60px;
+  background-color: gray;
+  text-align: center;
 }
 
 .pc-nav {
@@ -421,92 +428,120 @@ a:visited {}
   border-radius: 12px;
 }
 
-.twitter-area {
-  width: 300px;
-  height: 500px;
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+#loader {
+    display:flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00c2bc;
+    z-index: 20;
+    /* 環境によって「z-index」追加 */
+}
+/* 読み込み完了後に「loaded」を付与する */
+#loader.loaded {
+    animation: fadeOut 3s forwards;
+}
+
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
   position: relative;
-  background-color: #FFF;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
 
-.twitter-area>iframe {
-  z-index: 2;
-}
-
-.twitter-tweet {
-  position: absolute;
-  z-index: 1;
-}
-
-.loader,
-.loader:before,
-.loader:after {
-  background: #b0b0b0;
-  -webkit-animation: load1 1s infinite ease-in-out;
-  animation: load1 1s infinite ease-in-out;
-  width: 1em;
-  height: 4em;
-}
-
-.loader {
-  color: #b0b0b0;
-  text-indent: -9999em;
-  margin: 88px auto;
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
   position: relative;
-  font-size: 11px;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
 }
-
-.loader:before,
-.loader:after {
+.sk-folding-cube .sk-cube:before {
+  content: '';
   position: absolute;
   top: 0;
-  content: '';
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
 }
 
-.loader:before {
-  left: -1.5em;
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.loader:after {
-  left: 1.5em;
-}
-
-@-webkit-keyframes load1 {
-
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 0;
-    height: 4em;
-  }
-
-  40% {
-    box-shadow: 0 -2em;
-    height: 5em;
-  }
-}
-
-@keyframes load1 {
-
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 0;
-    height: 4em;
-  }
-
-  40% {
-    box-shadow: 0 -2em;
-    height: 5em;
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
   }
 }
