@@ -83,7 +83,7 @@ onload = async () => {
 
         const options = {
             perMove: 1,
-            gap: 10,
+            gap: 15,
             pagination: false,
             autoWidth: true,
             autoHeight: true,
