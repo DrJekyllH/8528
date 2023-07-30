@@ -3,7 +3,7 @@
 }
 
 .splide {
-    width: 100vw;
+    width: 100%;
 }
 
 .video-link:hover {
@@ -45,7 +45,8 @@
 }
 
 .video-container {
-    width: 340px;
+    width: 347px;
+    word-wrap: break-word;
 }
 
 .shorts-thumbnail {
