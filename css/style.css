@@ -221,6 +221,7 @@ header {
 }
 
 footer{
+  display: flex;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -228,7 +229,10 @@ footer{
   background-color: #dcdcdc;
   margin: 10px 0 0 0; 
   color: #000000;
+  align-items: center;
   text-align: center;
+  vertical-align: center;
+  padding-left: 20px;
 }
 
 .pc-nav {
