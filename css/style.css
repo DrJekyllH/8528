@@ -25,6 +25,11 @@ body	{
     .logo{
         margin-left:40rem;
     }
+.pickup-video-thumnail{
+object-fit: cover;
+width: 384px;
+height: 216px;
+}
 }
 @media (max-width: 769px)	{
     .pc-nav{
@@ -40,6 +45,11 @@ body	{
         margin-left: auto;
         margin-right: auto;
     }
+.pickup-video-thumnail{
+
+width: 100%;
+
+}
 }
 	body{
 		display: flex;
@@ -76,11 +86,7 @@ padding: 0;
 width: 100%;
 }
 
-.pickup-video-thumnail{
-object-fit: cover;
-width: 384px;
-height: 216px;
-}
+
 
 #player{
 margin-left:auto;
