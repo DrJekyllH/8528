@@ -38,7 +38,8 @@ let innerHTML = `
 `;
 }else{
 innerHTML=`
-<div style="width: 384px; height: 216px; border: 1px solid; display:flex; align-items:center;"><h1>🐥</h1></div><div class="video-title">嵐の前の静けさだっぴ・・・</div>
+<div style="width: 384px; height: 216px; border: 1px solid; display:flex; align-items:center;">
+<h1 style="filter:drop-shadow(5px -1px 2px #808080);">🐥</h1></div><div class="video-title">嵐の前の静けさだっぴ・・・</div>
 `;
 }
 
