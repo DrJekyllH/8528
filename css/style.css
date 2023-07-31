@@ -440,7 +440,6 @@ a:visited {}
   border-radius: 12px;
 }
 
-
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -556,4 +555,18 @@ a:visited {}
             transform: perspective(140px) rotateY(180deg);
     opacity: 0; 
   }
+}
+
+.buruburu {
+    text-align: center;
+    display: inline-block;
+    animation: hurueru .2s  infinite;
+}
+
+@keyframes hurueru {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(1px, 1px) rotateZ(1deg)}
+    50% {transform: translate(0px, 1px) rotateZ(0deg)}
+    75% {transform: translate(1px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
 }
