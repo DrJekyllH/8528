@@ -5,7 +5,7 @@ var cont_class = "video-container";
 const request = fetch('https://api.8528.space/stream.php?p=1')
 .then(response=> response.json())
 .then(data=>{
-
+if(data.length > 0){
 switch (data[0].status) {
 	case "live":
 		img_class = "video-thumbnail";
@@ -29,13 +29,21 @@ switch (data[0].status) {
 var title_alt = data[0].title;
 if (data[0].title.length > 48) data[0].title = data[0].title.substr(0, 46) + '…';
 
-let player = document.getElementById('player');
-player.innerHTML = `
+
+let innerHTML = `
 <a href="` + urlformat + data[0].vid + `" class="video-link" target="_blank" rel="noopener" title="` + title_alt + `">
 <img class="pickup-video-thumnail" src="` + data[0].turl + `"><br>
 <div class="video-title">` + data[0].title + `</div></a>
 <div class="video-channel"><a href="` + data[0].curl + `" target="_blank" rel="noopener noreferrer">` + plf_icon + ` ` + data[0].name + `</a><span style="margin-left:10rem;">更新: ` + data[0].time + `</span></div>
 `;
+}else{
+innerHTML=`
+<div style="width: 384px; height: 216px; border: 1px solid; display:flex; align-items:center;"><h1>🐥</h1></div><div class="video-title">嵐の前の静けさだっぴ・・・</div>
+`;
+}
+
+let player = document.getElementById('player');
+player.innerHTML = innerHTML;
 
 });
 
