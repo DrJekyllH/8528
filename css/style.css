@@ -229,11 +229,12 @@ footer{
   height:60px;
   background-color: #dcdcdc;
   margin: 10px 0 0 0; 
-  color: #000000;
+  color: #222222;
   align-items: center;
   text-align: center;
   vertical-align: center;
   padding-left: 20px;
+  font-size: 14rem;
 }
 
 .pc-nav {
