@@ -38,8 +38,9 @@ let innerHTML = `
 `;
 }else{
 innerHTML=`
-<div style="width: 384px; height: 216px; border: 1px solid; display:flex; align-items:center;">
+<div style="width: 384px; height: 216px; border: 1px solid; display:flex; align-items:center; flex-direction: column; overflow:hidden;">
 <h1 class="buruburu" style="filter:drop-shadow(5px -1px 2px #808080);">🐥</h1>
+<span style="color: transparent;text-shadow: 0 0 10px rgba(0,0,0,1); font-size: 200rem;">𝕏</span>
 </div>
 <div class="video-title">嵐の前の静けさだっぴ・・・</div>
 `;
