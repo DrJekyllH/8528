@@ -222,7 +222,7 @@ header {
 
 footer{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: auto;
@@ -234,11 +234,9 @@ footer{
 }
 .footer-box{
   display: flex;
-  margine-top: auto;
-  margine-bottom: auto;
   flex-direction: row;
   justify-content: space-between;
-  vertical-align: center;
+  width: 120rem;
 }
 
 .pc-nav {
