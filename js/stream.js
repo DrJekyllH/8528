@@ -20,6 +20,19 @@ openFile2("https://api.8528.space/stream.php?m=getstatus")
     let shorts = document.getElementsByClassName('splide shorts')[0].getElementsByClassName('splide__track')[0].getElementsByClassName('splide__list')[0];
         var data = JSON.parse(response);
 
+    let pi = `
+<div style="width: 384px; height: 216px; border: 1px solid; overflow:hidden;position:relative;">
+<div style="position: absolute; left:5rem; bottom:5rem; border:1px solid; font-size:12rem; width: 100rem; z-index: -1;">
+🐄･-･･･ ･-･ ･-･･ ･-･･ ･･ ---･- ･- -･<br>
+🐈･-･･･ ･-- ---- ･･-･･ ･･ ･-･-･<br>
+🍎･--- -･ ･ ･･ -･ ･-<br>
+🐍･-･･･ - ･･･ ･- ---･- -･･-･<br>
+🍊･- ･- ･-･･ -･･-･ --･-<br>
+</div>
+<div style="position: absolute; right:-80rem; bottom:-150rem; font-size:230rem; text-align: right; z-index: 1;">🐥</div>
+</div>
+<div class="video-title">嵐の前の静けさだっぴ・・・</div>`;
+
         data.forEach(function(elm) {
             switch (elm.status) {
                 case "upcoming":
@@ -95,25 +108,25 @@ openFile2("https://api.8528.space/stream.php?m=getstatus")
             new Splide('.live', options).mount();
         } else {
             let live_pi = document.getElementById('live-pi');
-            live_pi.innerHTML = '📦';
+            live_pi.innerHTML = pi;
         }
         if (upcoming.children.length > 0) {
             new Splide('.upcoming', options).mount();
         } else {
             let upcoming_pi = document.getElementById('upcoming-pi');
-            upcoming_pi.innerHTML = '🐣';
+            upcoming_pi.innerHTML = pi;
         }
         if (video.children.length > 0) {
             new Splide('.video', options).mount();
         } else {
             let video_pi = document.getElementById('video-pi');
-            video_pi.innerHTML = '🐥';
+            video_pi.innerHTML = pi;
         }
         if (shorts.children.length > 0) {
             new Splide('.shorts', options).mount();
         } else {
             let shorts_pi = document.getElementById('shorts-pi');
-            shorts_pi.innerHTML = '🐤';
+            shorts_pi.innerHTML = pi;
         }
 //    }
 
