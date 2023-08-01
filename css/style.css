@@ -233,6 +233,7 @@ footer{
   font-size: 14rem;
 }
 .footer-box{
+  display: flex;
   margine-top: auto;
   margine-bottom: auto;
   flex-direction: column;
