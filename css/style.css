@@ -235,6 +235,7 @@ footer{
 .footer-box{
   margine-top: auto;
   margine-bottom: auto;
+  justify-content: space-between;
   vertical-align: center;
 }
 
