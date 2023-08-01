@@ -235,7 +235,7 @@ footer{
 .footer-box{
   margine-top: auto;
   margine-bottom: auto;
-  flex-direction: colmun;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
   vertical-align: center;
