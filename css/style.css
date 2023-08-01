@@ -236,7 +236,7 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 120rem;
+  width: 200rem;
 }
 
 .pc-nav {
