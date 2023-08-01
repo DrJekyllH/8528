@@ -8,12 +8,9 @@ function openFile(url){
     return f;
 }
 
-
-onload = async () => {
-
-openFile("include/header.html")
+openFile("https://www.8528.space/include/header.html")
     .then((response) => {
-        const headerHTML = response.responseText;
+        const headerHTML = response;
         const header = document.querySelector("#header");
         header.insertAdjacentHTML("afterbegin", headerHTML);
         const headerNavLink = document.querySelectorAll('.js-header-nav-link');
@@ -23,9 +20,9 @@ openFile("include/header.html")
             }
         });
     })
-    .then((response)=>openFile("include/footer.html"))
+    .then((response)=>openFile("https://www.8528.space/include/footer.html"))
     .then((response)=>{
-        const footerHTML = response.responseText;
+        const footerHTML = response;
         const footer = document.querySelector("#footer");
         footer.insertAdjacentHTML("afterbegin", footerHTML);
     });
@@ -144,4 +141,3 @@ openFile("https://api.8528.space/stream.php?m=getstatus")
     const loader = document.getElementById('loader');
     loader.classList.add('loaded');
 }).catch((e)=> console.log(e));
-}
