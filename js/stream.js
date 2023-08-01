@@ -8,7 +8,7 @@ function openFile(url){
     return f;
 }
 
-openFile("https://www.8528.space/include/header.html")
+openFile("include/header.html")
     .then((response) => {
         const headerHTML = response;
         const header = document.querySelector("#header");
@@ -20,7 +20,7 @@ openFile("https://www.8528.space/include/header.html")
             }
         });
     })
-    .then((response)=>openFile("https://www.8528.space/include/footer.html"))
+    .then((response)=>openFile("include/footer.html"))
     .then((response)=>{
         const footerHTML = response;
         const footer = document.querySelector("#footer");
