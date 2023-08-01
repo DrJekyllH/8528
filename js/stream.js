@@ -1,4 +1,4 @@
-function openFile2(url){
+function openFile(url){
     const f = new Promise((resolve, reject) =>{
     const request = new XMLHttpRequest();
     request.open("GET", url, true);
@@ -8,7 +8,26 @@ function openFile2(url){
     return f;
 }
 
-openFile2("https://api.8528.space/stream.php?m=getstatus")
+openFile("include/header.html")
+    .then((response) => {
+        const headerHTML = response;
+        const header = document.querySelector("#header");
+        header.insertAdjacentHTML("afterbegin", headerHTML);
+        const headerNavLink = document.querySelectorAll('.js-header-nav-link');
+        headerNavLink.forEach((targetLink) => {
+            if (targetLink.href === location.href) {
+                targetLink.parentElement.classList.add('is-current');
+            }
+        });
+    })
+    .then((response)=>openFile("include/footer.html"))
+    .then((response)=>{
+        const footerHTML = response;
+        const footer = document.querySelector("#footer");
+        footer.insertAdjacentHTML("afterbegin", footerHTML);
+    });
+
+openFile("https://api.8528.space/stream.php?m=getstatus")
     .then((response) => {
 
     var urlformat = "https://www.youtube.com/watch?v=";
