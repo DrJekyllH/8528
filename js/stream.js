@@ -1,38 +1,38 @@
+function openFile(url){
+    const f = new Promise((resolve, reject) =>{
+    const request = new XMLHttpRequest();
+    request.open("GET", url, true);
+    request.addEventListener('load', (e)=> resolve(request.responseText));
+    request.send();
+    });
+    return f;
+}
+
+
 onload = async () => {
 
-    const loader = document.getElementById('loader');
-    loader.classList.add('loaded');
+openFile("include/header.html")
+    .then((response) => {
+        const headerHTML = response.responseText;
+        const header = document.querySelector("#header");
+        header.insertAdjacentHTML("afterbegin", headerHTML);
+        const headerNavLink = document.querySelectorAll('.js-header-nav-link');
+        headerNavLink.forEach((targetLink) => {
+            if (targetLink.href === location.href) {
+                targetLink.parentElement.classList.add('is-current');
+            }
+        });
+    })
+    .then((response)=>openFile("include/footer.html"))
+    .then((response)=>{
+        const footerHTML = response.responseText;
+        const footer = document.querySelector("#footer");
+        footer.insertAdjacentHTML("afterbegin", footerHTML);
+    });
 
-    const includeHeader = new XMLHttpRequest();
-    includeHeader.open("GET", "include/header.html", true);
-    includeHeader.onload = function() {    
-            const headerHTML = includeHeader.responseText;
-            const header = document.querySelector("#header");
-            header.insertAdjacentHTML("afterbegin", headerHTML);
-            const headerNavLink = document.querySelectorAll('.js-header-nav-link');
-            headerNavLink.forEach((targetLink) => {
-                if (targetLink.href === location.href) {
-                    targetLink.parentElement.classList.add('is-current');
-                }
-            });     
-    };
+openFile("https://api.8528.space/stream.php?m=getstatus")
+    .then((response) => {
 
-includeHeader.send();
-
-const includeFooter = new XMLHttpRequest();
-includeFooter.open("GET", "include/footer.html", true);
-includeFooter.onreadystatechange = function () {
-  if (includeFooter.readyState === 4 && includeFooter.status === 200) {
-    const footerHTML = includeFooter.responseText;
-    const footer = document.querySelector("#footer");
-    footer.insertAdjacentHTML("afterbegin", footerHTML);
-  }
-};
-
-includeFooter.send();
-
-    //    const res = await fetch("https://www.youtube.com/@nomuranimu2nd");
-    //console.log(res);
     var urlformat = "https://www.youtube.com/watch?v=";
     var img_class = "video-thumbnail";
     var cont_class = "video-container";
@@ -40,10 +40,7 @@ includeFooter.send();
     let live = document.getElementsByClassName('live')[0].getElementsByClassName('splide__track')[0].getElementsByClassName('splide__list')[0];
     let video = document.getElementsByClassName('splide video')[0].getElementsByClassName('splide__track')[0].getElementsByClassName('splide__list')[0];
     let shorts = document.getElementsByClassName('splide shorts')[0].getElementsByClassName('splide__track')[0].getElementsByClassName('splide__list')[0];
-    var request = new XMLHttpRequest();
-    request.open('GET', 'https://api.8528.space/stream.php?m=getstatus', true);
-    request.onload = function() {
-        var data = JSON.parse(this.response);
+        var data = JSON.parse(response);
 
         data.forEach(function(elm) {
             switch (elm.status) {
@@ -53,6 +50,7 @@ includeFooter.send();
                     img_class = "video-thumbnail";
                     cont_class = "video-container";
                     urlformat = "https://www.youtube.com/watch?v=";
+                    sch = `<span style="position: absolute; top:5rem; left:0rem; background-color: rgba(200,200,200,0.9); padding: 0rem 2rem 0rem 2rem; font-size: 12rem;">` + elm.schedule + ` 予定</span>`;
                     break;
                 case "shorts":
                     var parentbox = shorts;
@@ -60,6 +58,7 @@ includeFooter.send();
                     img_class = "shorts-thumbnail";
                     cont_class = "shorts-container";
                     urlformat = "https://www.youtube.com/shorts/";
+                    sch = "";
                     break;
                 case "live":
                     var parentbox = live;
@@ -69,9 +68,10 @@ includeFooter.send();
                         var plf_icon = '<i class="fa-brands fa-twitch" style="color: #402950;"></i>';
                         urlformat = "https://www.twitch.tv/";
                     } else {
-                        var plf_icon = '<i class="fa-brands fa-youtube"></i>';
+                        var plf_icon = '<i class="fa-brands fa-youtube" style="color: #ff0000;"></i>';
                         urlformat = "https://www.youtube.com/watch?v=";
                     }
+                    sch = "";
                     break;
                 case "none":
                 default:
@@ -80,6 +80,7 @@ includeFooter.send();
                     img_class = "video-thumbnail";
                     cont_class = "video-container";
                     urlformat = "https://www.youtube.com/watch?v=";
+                    sch = "";
             }
             var title_alt = elm.title;
             if (elm.title.length > 48) elm.title = elm.title.substr(0, 46) + '…';
@@ -89,13 +90,14 @@ includeFooter.send();
             div.innerHTML = `
 <div class="` + cont_class + `">
 <a href="` + urlformat + elm.vid + `" class="video-link" target="_blank" rel="noopener" title="` + title_alt + `">
-<img class="` + img_class + `" src="` + elm.turl + `"><br>
+<div><img class="` + img_class + `" src="` + elm.turl + `">
+`+ sch +`
+</div>
 <div class="video-title">` + elm.title + `</div></a>
 <div class="video-channel"><a href="` + elm.curl + `" target="_blank" rel="noopener noreferrer">` + plf_icon + ` ` + elm.name + `</a><span style="margin-left:10rem;">更新: ` + elm.time + `</span></div>
 </div>`;
             parentbox.appendChild(div);
         });
-
 
         const options = {
             perMove: 1,
@@ -135,7 +137,11 @@ includeFooter.send();
             let shorts_pi = document.getElementById('shorts-pi');
             shorts_pi.innerHTML = '🐤';
         }
-    }
-    request.send();
+//    }
 
+})
+.then(()=>{
+    const loader = document.getElementById('loader');
+    loader.classList.add('loaded');
+}).catch((e)=> console.log(e));
 }
