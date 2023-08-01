@@ -10,6 +10,7 @@ function openFile(url){
 
 openFile("include/header.html")
     .then((response) => {
+console.log(response);
         const headerHTML = response;
         const header = document.querySelector("#header");
         header.insertAdjacentHTML("afterbegin", headerHTML);
