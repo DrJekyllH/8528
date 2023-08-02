@@ -42,20 +42,21 @@ openFile("https://api.8528.space/stream.php?m=getstatus")
 
     let pi = `
 <div style="width: 384px; height: 216px; border: 1px solid; overflow:hidden;position:relative;">
-<div style="position: absolute; left:5px; bottom:5px; border:1px solid; font-size:12px; width: 100px; z-index: -1;">
-<img src="images/fox_flat.svg" style="vertical-align: text-bottom; width: 12px;">
+  <div style="position: absolute; left:5px; bottom:5px; border:1px solid; font-size:12px; width: 100px; z-index: -1;">
+    <img src="images/fox_flat.svg" style="vertical-align: text-bottom; width: 12px;">
 ･-･･･ ･-･ ･-･･ ･-･･ ･･ ---･- ･- -･<br>
-<img src="images/green_apple_flat.svg" style="vertical-align: text-bottom; width: 12px;">
+    <img src="images/green_apple_flat.svg" style="vertical-align: text-bottom; width: 12px;">
 ･-･･･ ･-- ---- ･･-･･ ･･ ･-･-･<br>
-<img src="images/elephant_flat.svg" style="vertical-align: text-bottom; width: 12px;">
+    <img src="images/elephant_flat.svg" style="vertical-align: text-bottom; width: 12px;">
 ･--- -･ ･ ･･ -･ ･-<br>
-<img src="images/duck_flat.svg" style="vertical-align: text-bottom; width: 12px;">
+    <img src="images/duck_flat.svg" style="vertical-align: text-bottom; width: 12px;">
 ･-･･･ - ･･･ ･- ---･- -･･-･<br>
-<img src="images/carrot_flat.svg" style="vertical-align: text-bottom; width: 12px;">
+    <img src="images/carrot_flat.svg" style="vertical-align: text-bottom; width: 12px;">
 ･- ･- ･-･･ -･･-･ --･-<br>
-</div>
-<div style="position: absolute; right:-40px; bottom:-100px; font-size:230px; text-align: right; z-index: 1;">
-<img src="images/front-facing_baby_chick_flat.svg" style="vertical-align: text-bottom; width: 230px;">
+  </div>
+  <div style="position: absolute; right:-40px; bottom:-100px; font-size:230px; text-align: right; z-index: 1;">
+    <img src="images/front-facing_baby_chick_flat.svg" style="vertical-align: text-bottom; width: 230px;">
+  </div>
 </div>
 <div class="video-title">嵐の前の静けさだっぴ・・・</div>`;
 
