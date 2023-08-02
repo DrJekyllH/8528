@@ -8,6 +8,7 @@ function openFile(url){
     return f;
 }
 
+window.onload = function(){
 openFile("include/header.html")
     .then((response) => {
         const headerHTML = response;
@@ -145,3 +146,5 @@ openFile("https://api.8528.space/stream.php?m=getstatus")
     const loader = document.getElementById('loader');
     loader.classList.add('loaded');
 }).catch((e)=> console.log(e));
+
+}
