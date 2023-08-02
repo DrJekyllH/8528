@@ -235,11 +235,13 @@ footer{
   font-size: 14rem;
   flex-wrap: wrap;
 }
-.footer-box{
+.footer-box, .footer-box a{
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 200rem;
+  color: #444444;
+  font-size: 14rem;
 }
 
 .pc-nav {
