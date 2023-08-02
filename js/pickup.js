@@ -43,7 +43,7 @@ html =`
 <h1 class="buruburu" style="filter:drop-shadow(5px -1px 2px #808080);">
 <img src="images/front-facing_baby_chick_flat.svg" style="vertical-align: text-bottom; width: 28px; fill-opacity: 0.6 !important;">
 </h1>
-<img src="images/X.svg" style="filter: drop-shadow(0 -60px 10px rgba(0,0,0,1)); width: 200px; padding: 150px;">
+<img src="images/X.svg" style="filter: drop-shadow(0 -60px 10px rgba(0,0,0,1)); width: 200px; padding: 100px;">
 </div>
 <div class="video-title">嵐の前の静けさだっぴ・・・</div>
 `;
