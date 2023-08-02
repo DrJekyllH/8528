@@ -231,6 +231,7 @@ footer{
   background-color: #dcdcdc;
   color: #444444;
   font-size: 14rem;
+  flex-wrap: wrap;
 }
 .footer-box{
   display: flex;
