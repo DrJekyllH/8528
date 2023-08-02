@@ -40,16 +40,7 @@ openFile("https://api.8528.space/stream.php?m=getstatus")
         var data = JSON.parse(response);
 
     let pi = `
-<div style="width: 384px; height: 216px; border: 1px solid; overflow:hidden;position:relative;">
-<div style="position: absolute; left:5px; bottom:5px; border:1px solid; font-size:12px; width: 100px; z-index: -1;">
-🐄･-･･･ ･-･ ･-･･ ･-･･ ･･ ---･- ･- -･<br>
-🐈･-･･･ ･-- ---- ･･-･･ ･･ ･-･-･<br>
-🍎･--- -･ ･ ･･ -･ ･-<br>
-🐍･-･･･ - ･･･ ･- ---･- -･･-･<br>
-🍊･- ･- ･-･･ -･･-･ --･-<br>
-</div>
-<div style="position: absolute; right:-80px; bottom:-150px; font-size:230px; text-align: right; z-index: 1;">🐥</div>
-</div>
+<img src="images/novideo1.png">
 <div class="video-title">嵐の前の静けさだっぴ・・・</div>`;
 
         data.forEach(function(elm) {
