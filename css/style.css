@@ -27,6 +27,9 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
   h2 {
     font-size: 32rem;
   }
+  h3 {
+    font-size:  28rem;
+  }
 
   .sp-nav {
     display: none;
@@ -49,7 +52,18 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
 
     height: 100%;
   }
+
+  .news-col{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    vertical-align:top;
+  }
+
 }
+
 
 @media (max-width: 849px) {
   .pc-nav {
@@ -98,6 +112,10 @@ h2 {
   font-size: 20rem;
 }
 
+h3 {
+  font-size: 18rem;
+}
+
 #pickup-video {
   width: 100%;
   justify-content: center;
@@ -141,11 +159,11 @@ h2 {
 
 .news-child {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   vertical-align:top;
   text-align: center;
-  height: 100%;
   padding: 0;
 }
 
