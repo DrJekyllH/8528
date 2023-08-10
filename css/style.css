@@ -9,7 +9,6 @@ body {
   -ms-overflow-style: none;    /* IE, Edge 対応 */
   scrollbar-width: none;
   padding-top: 70px;
-  min-height: 100vh;
   justify-content: stretch;
 }
 body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
@@ -169,7 +168,7 @@ h3 {
 }
 
 .video-list{
- display: flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -241,6 +240,8 @@ header {
 
 footer{
   display: flex;
+  position: absolute;
+  bottom: 0;
   flex-direction: row;
   align-items: center;
   justify-content: center;
