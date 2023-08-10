@@ -10,6 +10,7 @@ body {
   scrollbar-width: none;
   padding-top: 70px;
   min-height: 100vh;
+  justify-content: stretch;
 }
 body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
   display:none;
@@ -93,7 +94,7 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   font-family: 'Noto Sans JP', sans-serif;
 }
