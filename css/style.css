@@ -10,6 +10,7 @@ body {
   -ms-overflow-style: none;    /* IE, Edge 対応 */
   scrollbar-width: none;
   padding: 0px;
+  padding-top: 70px;
   justify-content: stretch;
 }
 body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
