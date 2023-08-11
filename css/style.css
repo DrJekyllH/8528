@@ -3,6 +3,7 @@ html {
 }
 
 body {
+height: 100%
   margin: 0px;
   font-size: 16rem;
   overflow: scroll;
@@ -240,7 +241,7 @@ header {
 
 footer{
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   flex-direction: row;
   align-items: center;
