@@ -243,6 +243,8 @@ header {
 footer{
   display: flex;
   position: sticky;
+  margin-top: 10px;
+  padding: 10px;
   top: 100vh;
   width:100%;
   flex-direction: row;
