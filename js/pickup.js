@@ -59,6 +59,6 @@ const owntwitch = fetch('https://api.8528.space/getowntwitch.php')
 	.then(data => {
 		if (data.length > 0) {
 			//Twitch配信中だったら埋め込み
-			document.getElementById('official-channel').innerHTML = '<iframe src="https://player.twitch.tv/?channel=8528p&parent=8528.space" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>';
+			document.getElementById('official-channel').innerHTML = '<iframe src="https://player.twitch.tv/?channel=8528p&parent=www.8528.space" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>';
 		}
 	});
