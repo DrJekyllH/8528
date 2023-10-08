@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streams 箱庭プロジェクト（仮）</title>
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-	<!-- splide.css cdn -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <link rel="stylesheet" href="https://www.8528.space/css/style.css">
-	<link rel="stylesheet" href="https://www.8528.space/css/nav.css">
-	<link rel="stylesheet" href="https://www.8528.space/css/slideshow.css">
-    <script src="js/stream.js"></script>
-    <script src="https://kit.fontawesome.com/2ca48b5450.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://www.8528.space/fonts/style.css">
-<script>
-</script>
-  </head>
-  <body>
-    <div id="loader">
-      <div class="sk-folding-cube">
-        <div class="sk-cube1 sk-cube"></div>
-        <div class="sk-cube2 sk-cube"></div>
-        <div class="sk-cube4 sk-cube"></div>
-        <div class="sk-cube3 sk-cube"></div>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streams 箱庭プロジェクト</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <!-- splide.css cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link rel="stylesheet" href="https://www.8528.space/css/style.css">
+  <link rel="stylesheet" href="https://www.8528.space/css/nav.css">
+  <link rel="stylesheet" href="https://www.8528.space/css/slideshow.css">
+  <script src="js/stream.js"></script>
+  <script src="https://kit.fontawesome.com/2ca48b5450.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.8528.space/fonts/style.css">
+  <script>
+  </script>
+</head>
+
+<body>
+  <div id="loader">
+    <div class="sk-folding-cube">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+    </div>
+  </div>
+  <header id="header">
+  </header>
+  <h2>配信情報</h2>
+  <div class="content">
+    プロジェクトに参加しているバーチャルライバーさんのチャンネルの過去24時間の活動が表示されます。
+  </div>
+  <hr width="30px">
+  <p>🔴配信中！
+  <div class="splide live">
+    <div class="splide__track">
+      <div class="splide__list">
       </div>
     </div>
-<header id="header">
-</header>
-<h2>配信情報</h2>
-<div class="content">
-プロジェクトに参加しているVtuberさんのチャンネルの過去24時間の活動が表示されます。
-</div>
-<hr width="30px">
-<p>🔴配信中！
-<div class="splide live">
-  <div class="splide__track">
-		<div class="splide__list">
-		</div>
-  </div>
-</div><span id="live-pi"></span>
-<hr width="30px">
-</p>
-<p>
-配信予定
-<div class="splide upcoming">
-  <div class="splide__track">
-		<div class="splide__list">
-		</div>
-  </div>
-</div><span id="upcoming-pi"></span>
-<hr width="30px">
-</p>
-<p>
-投稿動画・アーカイブ
-<div class="splide video">
-  <div class="splide__track">
-		<div class="splide__list">
-		</div>
-  </div>
-</div><span id="video-pi"></span>
-<hr width="30px">
-</p>
-<p>
-ショート
-<div class="splide shorts">
-  <div class="splide__track">
-		<div class="splide__list">
-		</div>
-  </div>
-</div><span id="shorts-pi"></span>
-</p>
-    <footer id="footer">
-    </footer>
+  </div><span id="live-pi"></span>
+  <hr width="30px">
+  </p>
+  <p>
+    配信予定
+  <div class="splide upcoming">
+    <div class="splide__track">
+      <div class="splide__list">
+      </div>
+    </div>
+  </div><span id="upcoming-pi"></span>
+  <hr width="30px">
+  </p>
+  <p>
+    投稿動画・アーカイブ
+  <div class="splide video">
+    <div class="splide__track">
+      <div class="splide__list">
+      </div>
+    </div>
+  </div><span id="video-pi"></span>
+  <hr width="30px">
+  </p>
+  <p>
+    ショート
+  <div class="splide shorts">
+    <div class="splide__track">
+      <div class="splide__list">
+      </div>
+    </div>
+  </div><span id="shorts-pi"></span>
+  </p>
+  <footer id="footer">
+  </footer>
 </body>
+
 </html>
