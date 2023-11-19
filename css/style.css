@@ -7,14 +7,17 @@ body {
   margin: 0px;
   font-size: 16rem;
   overflow: scroll;
-  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  -ms-overflow-style: none;
+  /* IE, Edge 対応 */
   scrollbar-width: none;
   padding: 0px;
   padding-top: 70px;
   justify-content: stretch;
 }
-body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
-  display:none;
+
+body::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
 }
 
 @media (min-width: 850px) {
@@ -29,8 +32,9 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
   h2 {
     font-size: 32rem;
   }
+
   h3 {
-    font-size:  28rem;
+    font-size: 28rem;
   }
 
   .sp-nav {
@@ -49,19 +53,23 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
     object-fit: cover;
     width: 384px;
     height: 216px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
   }
+
   .news-child {
 
     height: 100%;
   }
 
-  .news-col{
+  .news-col {
     display: flex;
     align-items: stretch;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    vertical-align:top;
+    vertical-align: top;
   }
 
 }
@@ -80,13 +88,15 @@ body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
     display: none;
   }
 
-  .logo {
-
-  }
+  .logo {}
 
   .pickup-video-thumnail {
     width: 100%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
   }
+
   .news-child {
     width: 100%;
   }
@@ -156,7 +166,7 @@ h3 {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  vertical-align:top;
+  vertical-align: top;
 }
 
 .news-child {
@@ -164,17 +174,17 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  vertical-align:top;
+  vertical-align: top;
   text-align: center;
   padding: 0;
 }
 
-.video-list{
+.video-list {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  vertical-align:top;
+  vertical-align: top;
   text-align: center;
   height: 100%;
   padding: 0;
@@ -227,8 +237,8 @@ h3 {
 
 header {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 60px;
   display: flex;
@@ -237,16 +247,16 @@ header {
   align-items: center;
   text-align: center;
   background-color: #ffffff;
-  z-index:10;
+  z-index: 10;
 }
 
-footer{
+footer {
   display: flex;
   position: sticky;
   margin-top: 10px;
   padding: 10px;
   top: 100vh;
-  width:100%;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -255,7 +265,9 @@ footer{
   font-size: 14rem;
   flex-wrap: wrap;
 }
-.footer-box, .footer-box a{
+
+.footer-box,
+.footer-box a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -264,9 +276,7 @@ footer{
   font-size: 14rem;
 }
 
-.pc-nav {
-
-}
+.pc-nav {}
 
 .spacer {
   width: 200px;
@@ -424,7 +434,7 @@ a {
 }
 
 .nav-item {
-padding: 0px 5px 0px 5px;
+  padding: 0px 5px 0px 5px;
 }
 
 .nav-item:hover {
@@ -467,32 +477,34 @@ a:visited {}
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        display: none;
-        opacity: 0;
-        z-index: -1;
-    }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
 #loader {
-    display:flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    z-index: 20;
-    /* 環境によって「z-index」追加 */
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 20;
+  /* 環境によって「z-index」追加 */
 }
+
 /* 読み込み完了後に「loaded」を付与する */
 #loader.loaded {
-    animation: fadeOut 3s forwards;
+  animation: fadeOut 3s forwards;
 }
 
 .sk-folding-cube {
@@ -501,7 +513,7 @@ a:visited {}
   height: 40px;
   position: relative;
   -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
 }
 
 .sk-folding-cube .sk-cube {
@@ -510,9 +522,10 @@ a:visited {}
   height: 50%;
   position: relative;
   -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1); 
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
+
 .sk-folding-cube .sk-cube:before {
   content: '';
   position: absolute;
@@ -522,77 +535,114 @@ a:visited {}
   height: 100%;
   background-color: #2e8b57;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
-          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
-      -ms-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
 }
+
 .sk-folding-cube .sk-cube2 {
   -webkit-transform: scale(1.1) rotateZ(90deg);
-          transform: scale(1.1) rotateZ(90deg);
+  transform: scale(1.1) rotateZ(90deg);
 }
+
 .sk-folding-cube .sk-cube3 {
   -webkit-transform: scale(1.1) rotateZ(180deg);
-          transform: scale(1.1) rotateZ(180deg);
+  transform: scale(1.1) rotateZ(180deg);
 }
+
 .sk-folding-cube .sk-cube4 {
   -webkit-transform: scale(1.1) rotateZ(270deg);
-          transform: scale(1.1) rotateZ(270deg);
+  transform: scale(1.1) rotateZ(270deg);
 }
+
 .sk-folding-cube .sk-cube2:before {
   -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
+
 .sk-folding-cube .sk-cube3:before {
   -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s; 
+  animation-delay: 0.6s;
 }
+
 .sk-folding-cube .sk-cube4:before {
   -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
+
 @-webkit-keyframes sk-foldCubeAngle {
-  0%, 10% {
+
+  0%,
+  10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);
-            transform: perspective(140px) rotateX(-180deg);
-    opacity: 0; 
-  } 25%, 75% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+
+  25%,
+  75% {
     -webkit-transform: perspective(140px) rotateX(0deg);
-            transform: perspective(140px) rotateX(0deg);
-    opacity: 1; 
-  } 90%, 100% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  90%,
+  100% {
     -webkit-transform: perspective(140px) rotateY(180deg);
-            transform: perspective(140px) rotateY(180deg);
-    opacity: 0; 
-  } 
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
 }
 
 @keyframes sk-foldCubeAngle {
-  0%, 10% {
+
+  0%,
+  10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);
-            transform: perspective(140px) rotateX(-180deg);
-    opacity: 0; 
-  } 25%, 75% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+
+  25%,
+  75% {
     -webkit-transform: perspective(140px) rotateX(0deg);
-            transform: perspective(140px) rotateX(0deg);
-    opacity: 1; 
-  } 90%, 100% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  90%,
+  100% {
     -webkit-transform: perspective(140px) rotateY(180deg);
-            transform: perspective(140px) rotateY(180deg);
-    opacity: 0; 
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
   }
 }
 
 .buruburu {
-    text-align: center;
-    display: inline-block;
-    animation: hurueru .2s  infinite;
+  text-align: center;
+  display: inline-block;
+  animation: hurueru .2s infinite;
 }
 
 @keyframes hurueru {
-    0% {transform: translate(0px, 0px) rotateZ(0deg)}
-    25% {transform: translate(1px, 1px) rotateZ(1deg)}
-    50% {transform: translate(0px, 1px) rotateZ(0deg)}
-    75% {transform: translate(1px, 0px) rotateZ(-1deg)}
-    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+  0% {
+    transform: translate(0px, 0px) rotateZ(0deg)
+  }
+
+  25% {
+    transform: translate(1px, 1px) rotateZ(1deg)
+  }
+
+  50% {
+    transform: translate(0px, 1px) rotateZ(0deg)
+  }
+
+  75% {
+    transform: translate(1px, 0px) rotateZ(-1deg)
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotateZ(0deg)
+  }
 }
