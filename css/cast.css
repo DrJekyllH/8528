@@ -1,0 +1,108 @@
+.cast_box {
+    text-align: center;
+    width: fit-content
+}
+
+.cast_img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+.cast_name {
+    margin: 0;
+}
+
+.cast_box img {
+    width: 200px;
+}
+
+.cast_box img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#content {
+    width: 100%;
+    margin-left: 10rem;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#content2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#table {
+    display: table;
+
+}
+
+#table_left {
+    display: table-cell;
+    width: 400px;
+}
+
+#table_right {
+    justify-content: center;
+    display: table-cell;
+    width: 400px;
+}
+
+.name_jp {
+    text-align: center;
+    font-size: 28rem;
+}
+
+.name_en {
+    text-align: center;
+    font-size: 14rem;
+}
+
+.intro {
+    text-align: left;
+    font-size: 16rem;
+    margin: 10rem;
+}
+
+#video {
+    margin: 10rem 0;
+}
+
+.birthday,
+.height,
+.mark,
+.color,
+.fan,
+.link {
+    margin: 0rem 10rem;
+    text-align: left;
+    font-size: 15rem;
+}
+
+#link {
+    text-align: left;
+    margin: 10rem 10rem;
+}
+
+.accounts {
+    font-size: 16rem;
+}
+
+.linkmark {
+    font-size: 12rem;
+}
+
+#container {
+    margin: -10rem 10rem;
+    text-align: center;
+    background: linear-gradient(200deg, #8b52a1, #ffffff);
+    width: 100%;
+}
