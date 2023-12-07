@@ -16,6 +16,7 @@ window.onload = function () {
     let intro = document.getElementById("intro");
     let link = document.getElementById("link");
     let video = document.getElementById("video");
+    let left = document.getElementById("table_left");
     if (searchParams.get("id")) {
         openFile("https://api.8528.space/cast.php?id=" + searchParams.get("id")).then((response) => {
             let data = JSON.parse(response);
@@ -32,6 +33,14 @@ window.onload = function () {
                 namae_div.className = 'name_en';
                 namae_div.innerHTML = data[2];
                 name.appendChild(namae_div);
+            }
+            if (data[4]) {
+                let tachie = document.createElement('img');
+                tachie.src = data[4];
+                tachie.width = 500;
+                left.appendChild(tachie);
+
+
             }
             if (data[8]) {
                 //誕生日
@@ -55,6 +64,8 @@ window.onload = function () {
                 color_span.className = 'color';
                 color_span.innerHTML = 'カラー：' + data[7] + ' <span style="display: inline-block; width: 16rem; background-color:' + data[7] + ';">&nbsp;</span>';
                 profile.appendChild(color_span);
+                let container = document.getElementById("container");
+                container.style.background = "linear-gradient(200deg, " + data[7] + ", #ffffff)";
 
             }
             if (data[6]) {
@@ -78,9 +89,9 @@ window.onload = function () {
             if (data[11]) {
                 //おすすめ動画
                 data[11] = JSON.stringify(data[11]).replace(/"/g, '');
-                console.log(data[11]);
+                //console.log(data[11]);
                 const vid = new URL(data[11]).searchParams;
-                console.log(vid.get("v"));
+                //console.log(vid.get("v"));
                 if (vid.get("v")) {
                     let video_span = document.createElement('div');
                     video_span.className = 'video';
@@ -94,28 +105,28 @@ window.onload = function () {
                 //Youtube
                 let link_span = document.createElement('span');
                 link_span.className = 'links';
-                link_span.innerHTML = '<a href="' + data[12] + '"><i class="fa-brands fa-youtube fa-2xl" style="color: #ff0000;"></i></a>';
+                link_span.innerHTML = '<a href="' + data[12] + '"><i class="fa-brands fa-youtube fa-2xl" style="color: #ff0000;"></i> Youtube</a>';
                 link.appendChild(link_span);
             }
             if (data[13]) {
                 //Twitch
                 let link_span = document.createElement('span');
                 link_span.className = 'links';
-                link_span.innerHTML = '<a href="' + data[13] + '"><i class="fa-brands fa-twitch fa-2xl" style="color: #6441a5;""></i></a>';
+                link_span.innerHTML = '<a href="' + data[13] + '"><i class="fa-brands fa-twitch fa-2xl" style="color: #6441a5;""></i> Twitch</a>';
                 link.appendChild(link_span);
             }
             if (data[14]) {
                 //X
                 let link_span = document.createElement('span');
                 link_span.className = 'links';
-                link_span.innerHTML = '<a href="' + data[14] + '"><i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #000000;"></i></a>';
+                link_span.innerHTML = '<a href="' + data[14] + '"><i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #000000;"></i> X（旧Twitter）</a>';
                 link.appendChild(link_span);
             }
             if (data[15]) {
                 //ショップ
                 let link_span = document.createElement('span');
                 link_span.className = 'links';
-                link_span.innerHTML = '<br><a href="' + data[15] + '"><i class="fa-solid fa-tag fa-2xl" style="color: #000000;"></i></a>';
+                link_span.innerHTML = '<a href="' + data[15] + '"><i class="fa-solid fa-basket-shopping fa-2xl" style="color: #000000;"></i> ショップ</a>';
                 link.appendChild(link_span);
             }
             if (data[5]) {
