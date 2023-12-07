@@ -41,7 +41,7 @@ window.onload = function () {
         openFile("https://api.8528.space/cast.php?id=" + searchParams.get("id"))
             .then((response) => {
                 let data = JSON.parse(response);
-                console.log(data);
+                //console.log(data);
                 if (data[1]) {
                     var namae_div = document.createElement('div');
                     namae_div.className = 'name_jp';
