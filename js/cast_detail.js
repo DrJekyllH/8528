@@ -105,28 +105,28 @@ window.onload = function () {
                 //Youtube
                 let link_span = document.createElement('span');
                 link_span.className = 'links';
-                link_span.innerHTML = '<a href="' + data[12] + '"><i class="fa-brands fa-youtube fa-2xl" style="color: #ff0000;"></i> Youtube</a>';
+                link_span.innerHTML = '<a href="' + data[12] + '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube fa-2xl" style="color: #ff0000;"></i> Youtube</a>';
                 link.appendChild(link_span);
             }
             if (data[13]) {
                 //Twitch
                 let link_span = document.createElement('span');
                 link_span.className = 'links';
-                link_span.innerHTML = '<a href="' + data[13] + '"><i class="fa-brands fa-twitch fa-2xl" style="color: #6441a5;""></i> Twitch</a>';
+                link_span.innerHTML = '<a href="' + data[13] + '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitch fa-2xl" style="color: #6441a5;""></i> Twitch</a>';
                 link.appendChild(link_span);
             }
             if (data[14]) {
                 //X
                 let link_span = document.createElement('span');
                 link_span.className = 'links';
-                link_span.innerHTML = '<a href="' + data[14] + '"><i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #000000;"></i> X（旧Twitter）</a>';
+                link_span.innerHTML = '<a href="' + data[14] + '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #000000;"></i> X（旧Twitter）</a>';
                 link.appendChild(link_span);
             }
             if (data[15]) {
                 //ショップ
                 let link_span = document.createElement('span');
                 link_span.className = 'links';
-                link_span.innerHTML = '<a href="' + data[15] + '"><i class="fa-solid fa-basket-shopping fa-2xl" style="color: #000000;"></i> ショップ</a>';
+                link_span.innerHTML = '<a href="' + data[15] + '" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-basket-shopping fa-2xl" style="color: #000000;"></i> ショップ</a>';
                 link.appendChild(link_span);
             }
             if (data[5]) {
