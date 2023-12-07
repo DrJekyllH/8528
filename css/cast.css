@@ -57,19 +57,37 @@
 }
 
 .name_jp {
+    font-weight: bold;
+    color: #000;
+    text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
     text-align: center;
     font-size: 28rem;
 }
 
 .name_en {
+    color: #000;
+    text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
     text-align: center;
     font-size: 14rem;
 }
 
-.intro {
+#intro {
     text-align: left;
-    font-size: 16rem;
+    font-size: 18rem;
     margin: 10rem;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    padding: 10rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#profile {
+    text-align: left;
+    margin: 10rem;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    padding: 10rem;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #video {
@@ -83,8 +101,14 @@
 .fan,
 .link {
     margin: 0rem 10rem;
+    padding: 2rem;
     text-align: left;
     font-size: 15rem;
+}
+
+.link_header {
+
+    font-weight: bold;
 }
 
 #link {
@@ -100,9 +124,22 @@
     font-size: 12rem;
 }
 
+.links {
+    display: inline-block;
+    margin: 5rem;
+    padding: 10rem;
+    width: 150rem;
+    text-align: center;
+    border: solid 1px #cccccc;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 #container {
     margin: -10rem 10rem;
     text-align: center;
-    background: linear-gradient(200deg, #8b52a1, #ffffff);
     width: 100%;
+}
+
+.back {
+    width: 80%;
 }
