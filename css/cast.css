@@ -51,8 +51,6 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 450rem;
-    min-width: 150rem;
 }
 
 #table_right {
@@ -60,9 +58,21 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    max-width: 450rem;
-    min-width: 150rem;
 }
+
+@media (min-width: 850px) {
+    #table_left {
+        max-width: 450rem;
+        min-width: 150rem;
+    }
+
+    #table_right {
+        max-width: 450rem;
+        min-width: 150rem;
+    }
+}
+
+@media (max-width: 849px) {}
 
 .name_jp {
     font-weight: bold;
@@ -87,6 +97,7 @@
     border: solid 1px #ccc;
     padding: 10rem;
     background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
 }
 
 #profile {
@@ -96,6 +107,7 @@
     border: solid 1px #ccc;
     padding: 10rem;
     background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
 }
 
 #video {
