@@ -52,6 +52,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 450rem;
+    min-width: 150rem;
 }
 
 #table_right {
@@ -60,6 +61,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 450rem;
+    min-width: 150rem;
 }
 
 .name_jp {
