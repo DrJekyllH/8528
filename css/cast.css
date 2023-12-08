@@ -154,7 +154,11 @@
         margin: 10rem 0;
     }
 
-
+    .color-sample {
+        width: 16rem;
+        display: inline-block;
+        border: solid 1px #fff;
+    }
 
     .link_header {
         width: 100%;
@@ -231,7 +235,11 @@
 
     #video {}
 
-
+    .color-sample {
+        width: 5rem;
+        display: inline-block;
+        border: solid 1px #fff;
+    }
 
     .link_header {
         width: 100%;
