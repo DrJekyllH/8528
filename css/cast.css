@@ -24,8 +24,7 @@
 }
 
 #content {
-    width: 80%;
-    margin-left: 10rem;
+
     display: flex;
     justify-content: left;
     flex-direction: row;
@@ -33,7 +32,7 @@
 }
 
 #content2 {
-    width: 100%;
+
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -78,27 +77,26 @@
 }
 
 
-
-.back {
-    width: 80%;
-}
-
 @media (min-width: 850px) {
+    #content {
+        width: 80%;
+        margin-left: 10rem;
+    }
+
+    #content2 {
+        width: 100%;
+    }
+
+    .back {
+        width: 80%;
+    }
+
     #container {
         margin: -10rem 0 -10rem 0;
         text-align: center;
         width: 100%;
     }
 
-    #table_left {
-        max-width: 450rem;
-        min-width: 150rem;
-    }
-
-    #table_right {
-        max-width: 450rem;
-        min-width: 150rem;
-    }
 
     #profile {
         text-align: left;
@@ -112,8 +110,8 @@
 
     #intro {
         text-align: left;
-        font-size: 18rem;
         margin: 10rem;
+        font-size: 18rem;
         border-radius: 10px;
         border: solid 1px #ccc;
         padding: 10rem;
@@ -121,8 +119,10 @@
         width: 90%;
     }
 
+
     #table_left {
-        margin: 10rem;
+        max-width: 450rem;
+        min-width: 150rem;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -130,7 +130,8 @@
     }
 
     #table_right {
-        margin: 10rem;
+        max-width: 450rem;
+        min-width: 150rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
