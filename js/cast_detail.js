@@ -72,9 +72,13 @@ window.onload = function () {
                 }
                 if (data["テーマ色（コード）"]) {
                     //キャラ色
+                    let iro = "";
+                    if (data["テーマ色（日本語）"]) {
+                        iro = data["テーマ色（日本語）"];
+                    }
                     let color_span = document.createElement('div');
                     color_span.className = 'color';
-                    color_span.innerHTML = 'カラー：' + data["テーマ色（コード）"] + ' <span class="color-sample" style="background-color:' + data["テーマ色（コード）"] + ';">&nbsp;</span>';
+                    color_span.innerHTML = 'カラー：' + iro + '(' + data["テーマ色（コード）"] + ') <span class="color-sample" style="background-color:' + data["テーマ色（コード）"] + ';">&nbsp;</span>';
                     profile.appendChild(color_span);
                     let container = document.getElementById("container");
                     container.style.background = "linear-gradient(200deg, " + data["テーマ色（コード）"] + ", #ffffff)";
