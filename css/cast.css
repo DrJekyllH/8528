@@ -46,33 +46,9 @@
     flex-wrap: wrap;
 }
 
-#table_left {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 
-#table_right {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
 
-@media (min-width: 850px) {
-    #table_left {
-        max-width: 450rem;
-        min-width: 150rem;
-    }
 
-    #table_right {
-        max-width: 450rem;
-        min-width: 150rem;
-    }
-}
-
-@media (max-width: 849px) {}
 
 .name_jp {
     font-weight: bold;
@@ -89,55 +65,9 @@
     font-size: 14rem;
 }
 
-#intro {
-    text-align: left;
-    font-size: 18rem;
-    margin: 10rem;
-    border-radius: 10px;
-    border: solid 1px #ccc;
-    padding: 10rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 90%;
-}
 
-#profile {
-    text-align: left;
-    margin: 10rem;
-    border-radius: 10px;
-    border: solid 1px #ccc;
-    padding: 10rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 90%;
-}
 
-#video {
-    margin: 10rem 0;
-}
 
-.birthday,
-.height,
-.mark,
-.color,
-.fan,
-.link {
-    margin: 0rem 10rem;
-    padding: 2rem;
-    text-align: left;
-    font-size: 15rem;
-}
-
-.link_header {
-    width: 100%;
-    font-weight: bold;
-}
-
-#link {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: left;
-    margin: 10rem 10rem;
-}
 
 .accounts {
     font-size: 16rem;
@@ -147,22 +77,181 @@
     font-size: 12rem;
 }
 
-.links {
-    display: inline-block;
-    margin: 5rem;
-    padding: 10rem;
-    width: 150rem;
-    text-align: center;
-    border: solid 1px #cccccc;
-    background-color: rgba(255, 255, 255, 0.5);
-}
 
-#container {
-    margin: -10rem 0 -10rem 0;
-    text-align: center;
-    width: 100%;
-}
 
 .back {
     width: 80%;
+}
+
+@media (min-width: 850px) {
+    #container {
+        margin: -10rem 0 -10rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    #table_left {
+        max-width: 450rem;
+        min-width: 150rem;
+    }
+
+    #table_right {
+        max-width: 450rem;
+        min-width: 150rem;
+    }
+
+    #profile {
+        text-align: left;
+        margin: 10rem;
+        border-radius: 10px;
+        border: solid 1px #ccc;
+        padding: 10rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 90%;
+    }
+
+    #intro {
+        text-align: left;
+        font-size: 18rem;
+        margin: 10rem;
+        border-radius: 10px;
+        border: solid 1px #ccc;
+        padding: 10rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 90%;
+    }
+
+    #table_left {
+        margin: 10rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #table_right {
+        margin: 10rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .birthday,
+    .height,
+    .mark,
+    .color,
+    .fan,
+    .link {
+        margin: 0rem 10rem;
+        padding: 2rem;
+        text-align: left;
+        font-size: 15rem;
+    }
+
+    #video {
+        margin: 10rem 0;
+    }
+
+
+
+    .link_header {
+        width: 100%;
+        font-weight: bold;
+    }
+
+    #link {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+        margin: 10rem 10rem;
+    }
+
+    .links {
+        display: inline-block;
+        margin: 5rem;
+        padding: 10rem;
+        width: 150rem;
+        text-align: center;
+        border: solid 1px #cccccc;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media (max-width: 849px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    #container {
+        text-align: center;
+        width: 100%;
+    }
+
+    #profile {
+        text-align: left;
+        padding: 0rem 3rem 3rem 3rem;
+    }
+
+    #intro {
+        text-align: left;
+        padding: 3rem 3rem;
+        font-size: 18rem;
+    }
+
+    #table_left {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #table_right {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .birthday,
+    .height,
+    .mark,
+    .color,
+    .fan,
+    .link {
+        text-align: left;
+        font-size: 15rem;
+    }
+
+    #video {}
+
+
+
+    .link_header {
+        width: 100%;
+        padding: 1rem;
+        font-weight: bold;
+    }
+
+    #link {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+
+    }
+
+    .links {
+        display: inline-block;
+        padding: 3rem;
+        width: 90%;
+        text-align: center;
+        border: solid 1px #cccccc;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 }
