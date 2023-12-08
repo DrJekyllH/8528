@@ -75,7 +75,7 @@ window.onload = function () {
                     //キャラ色
                     let color_span = document.createElement('div');
                     color_span.className = 'color';
-                    color_span.innerHTML = 'カラー：' + data[7] + ' <span style="display: inline-block; width: 16rem; background-color:' + data[7] + ';">&nbsp;</span>';
+                    color_span.innerHTML = 'カラー：' + data[7] + ' <span class="color-sample" style="background-color:' + data[7] + ';">&nbsp;</span>';
                     profile.appendChild(color_span);
                     let container = document.getElementById("container");
                     container.style.background = "linear-gradient(200deg, " + data[7] + ", #ffffff)";
