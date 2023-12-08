@@ -1,6 +1,6 @@
 .cast_box {
     text-align: center;
-    width: fit-content
+    width: fit-content;
 }
 
 .cast_img {
@@ -41,19 +41,25 @@
 }
 
 #table {
-    display: table;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #table_left {
-    display: table-cell;
-    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 450rem;
 }
 
 #table_right {
+    display: flex;
     justify-content: center;
-    display: table-cell;
-    width: 400px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 450rem;
 }
 
 .name_jp {
@@ -107,11 +113,14 @@
 }
 
 .link_header {
-
+    width: 100%;
     font-weight: bold;
 }
 
 #link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     text-align: left;
     margin: 10rem 10rem;
 }
@@ -135,7 +144,7 @@
 }
 
 #container {
-    margin: -10rem 10rem;
+    margin: -10rem 0 -10rem 0;
     text-align: center;
     width: 100%;
 }
