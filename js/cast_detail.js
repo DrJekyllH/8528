@@ -158,7 +158,8 @@ window.onload = function () {
                         loader.classList.add('loaded');
                     };
                     img.src = data[4];
-                    img.width = 500;
+                    img.style.width = "100%";
+                    img.style.alignSelf = "flex-end";
                     left.appendChild(img);
                     //                   let tachie = document.createElement('img');
                     //                   tachie.src = data[4];
