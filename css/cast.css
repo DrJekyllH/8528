@@ -101,7 +101,7 @@
     #profile {
         text-align: left;
         margin: 10rem;
-        border-radius: 10px;
+        border-radius: 10rem;
         border: solid 1px #ccc;
         padding: 10rem;
         background-color: rgba(255, 255, 255, 0.5);
@@ -112,7 +112,7 @@
         text-align: left;
         margin: 10rem;
         font-size: 18rem;
-        border-radius: 10px;
+        border-radius: 10rem;
         border: solid 1px #ccc;
         padding: 10rem;
         background-color: rgba(255, 255, 255, 0.5);
@@ -127,6 +127,7 @@
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
     }
 
     #table_right {
@@ -182,6 +183,44 @@
         border: solid 1px #cccccc;
         background-color: rgba(255, 255, 255, 0.5);
     }
+
+    .brand_logo {
+        height: 23rem;
+        vertical-align: middle;
+    }
+
+
+    #pic {
+        --border-color: black;
+        /*カッコの色*/
+        margin: 2rem auto;
+        padding: 2rem;
+        /*内側余白*/
+        position: relative;
+    }
+
+    #pic::before,
+    #pic::after {
+        content: '';
+        width: 20px;
+        height: 30px;
+        position: absolute;
+    }
+
+    #pic::before {
+        border-left: solid 2px var(--border-color);
+        border-top: solid 2px var(--border-color);
+        top: 0;
+        left: 0;
+    }
+
+    #pic::after {
+        border-right: solid 2px var(--border-color);
+        border-bottom: solid 2px var(--border-color);
+        bottom: 0;
+        right: 0;
+    }
+
 }
 
 @media (max-width: 849px) {
@@ -262,5 +301,10 @@
         text-align: center;
         border: solid 1px #cccccc;
         background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .brand_logo {
+        height: 3rem;
+        vertical-align: middle;
     }
 }
