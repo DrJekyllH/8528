@@ -8,6 +8,28 @@ function openFile(url) {
     return f;
 }
 
+function embedVideo(url) {
+    const hostname = urlParser(url).hostname
+
+    const matchesTwitch = url.match(/twitch\.tv\/([^#?/]+)/)
+    if (/twitch\.tv$/.test(hostname) && matchesTwitch) {
+        return 'https://player.twitch.tv/?channel=' + matchesTwitch[1] + '&autoplay=false'
+    }
+
+    if (/(youtube\.com|youtu\.be)$/.test(hostname) && !/\/user\//.test(url) && !/\/channel\//.test(url)) {
+        const matches = url.match(/(\/watch\?v=|youtu\.be\/)([^#&?/]+)/)
+        if (!matches) return ''
+        return 'https://www.youtube.com/embed/' + matches[2]
+    }
+
+    if (/(nicovideo\.jp|nico\.ms)$/.test(hostname) && !/live/.test(hostname)) {
+        const matches = url.match(/(\/watch\/|nico\.ms\/)([^#&?/]+)/)
+        if (!matches) return ''
+        return 'https://embed.nicovideo.jp/watch/' + matches[2]
+    }
+    return ''
+}
+
 window.onload = function () {
 
     openFile("include/header.html")
@@ -36,7 +58,7 @@ window.onload = function () {
     let intro = document.getElementById("intro");
     let link = document.getElementById("link");
     let video = document.getElementById("video");
-    let left = document.getElementById("table_left");
+    let left = document.getElementById("pic");
     if (searchParams.get("id")) {
         openFile("https://api.8528.space/cast.php?id=" + searchParams.get("id"))
             .then((response) => {
@@ -121,28 +143,70 @@ window.onload = function () {
                     //Youtube
                     let link_span = document.createElement('span');
                     link_span.className = 'links';
-                    link_span.innerHTML = '<a href="' + data["YouTube"] + '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube fa-2xl" style="color: #ff0000;"></i> Youtube</a>';
+                    link_span.innerHTML = '<a href="' + data["YouTube"] + '" target="_blank" rel="noopener noreferrer"><img src="images/YouTube_icon.svg" class="brand_logo"> Youtube</a>';
                     link.appendChild(link_span);
                 }
                 if (data["Twitch"]) {
                     //Twitch
                     let link_span = document.createElement('span');
                     link_span.className = 'links';
-                    link_span.innerHTML = '<a href="' + data["Twitch"] + '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitch fa-2xl" style="color: #6441a5;""></i> Twitch</a>';
+                    link_span.innerHTML = '<a href="' + data["Twitch"] + '" target="_blank" rel="noopener noreferrer"><img src="images/TwitchGlitchPurple.svg" class="brand_logo"> Twitch</a>';
+                    link.appendChild(link_span);
+                }
+                if (data["TikTok"]) {
+                    //Twitch
+                    let link_span = document.createElement('span');
+                    link_span.className = 'links';
+                    link_span.innerHTML = '<a href="' + data["TickTok"] + '" target="_blank" rel="noopener noreferrer"><img src="images/tiktok-color-icon.svg" class="brand_logo"> TikTok</a>';
+                    link.appendChild(link_span);
+                }
+                if (data["ツイキャス"]) {
+                    //Twitch
+                    let link_span = document.createElement('span');
+                    link_span.className = 'links';
+                    link_span.innerHTML = '<a href="' + data["ツイキャス"] + '" target="_blank" rel="noopener noreferrer"><img src="images/twitcasting.svg" class="brand_logo"> ツイキャス</a>';
                     link.appendChild(link_span);
                 }
                 if (data["X"]) {
                     //X
                     let link_span = document.createElement('span');
                     link_span.className = 'links';
-                    link_span.innerHTML = '<a href="' + data["X"] + '" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #000000;"></i> X（旧Twitter）</a>';
+                    link_span.innerHTML = '<a href="' + data["X"] + '" target="_blank" rel="noopener noreferrer"><img src="images/Twitter-X-App-Logo.svg" class="brand_logo"> X（旧Twitter）</a>';
+                    link.appendChild(link_span);
+                }
+                if (data["マシュマロ"]) {
+                    //ショップ
+                    let link_span = document.createElement('span');
+                    link_span.className = 'links';
+                    link_span.innerHTML = '<a href="' + data["マシュマロ"] + '" target="_blank" rel="noopener noreferrer"><img src="images/marshmallow_logo.svg" class="brand_logo"> マシュマロ</a>';
+                    link.appendChild(link_span);
+                }
+                if (data["BOOTH"]) {
+                    //ショップ
+                    let link_span = document.createElement('span');
+                    link_span.className = 'links';
+                    link_span.innerHTML = '<a href="' + data["BOOTH"] + '" target="_blank" rel="noopener noreferrer"><img src="images/Booth_logo_icon_r.svg" class="brand_logo"> BOOTH</a>';
+                    link.appendChild(link_span);
+                }
+                if (data["FANBOX"]) {
+                    //ショップ
+                    let link_span = document.createElement('span');
+                    link_span.className = 'links';
+                    link_span.innerHTML = '<a href="' + data["FANBOX"] + '" target="_blank" rel="noopener noreferrer"><img src="images/fanbox.svg" class="brand_logo"></a>';
+                    link.appendChild(link_span);
+                }
+                if (data["fansfer"]) {
+                    //ショップ
+                    let link_span = document.createElement('span');
+                    link_span.className = 'links';
+                    link_span.innerHTML = '<a href="' + data["fansfer"] + '" target="_blank" rel="noopener noreferrer"><img src="images/fansfer.svg" class="brand_logo"></a>';
                     link.appendChild(link_span);
                 }
                 if (data["ショップ"]) {
                     //ショップ
                     let link_span = document.createElement('span');
                     link_span.className = 'links';
-                    link_span.innerHTML = '<a href="' + data["ショップ"] + '" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-basket-shopping fa-2xl" style="color: #000000;"></i> ショップ</a>';
+                    link_span.innerHTML = '<a href="' + data["ショップ"] + '" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-basket-shopping fa-xl" style="color: #000000;"></i> ショップ</a>';
                     link.appendChild(link_span);
                 }
                 if (data["紹介文"]) {
