@@ -110,7 +110,7 @@ window.onload = function () {
                     //推しマーク
                     let mark_span = document.createElement('div');
                     mark_span.className = 'mark';
-                    mark_span.innerHTML = 'マーク：' + data["推しマーク"];
+                    mark_span.innerHTML = 'ファンマーク：' + data["推しマーク"];
                     profile.appendChild(mark_span);
 
                 }
@@ -120,6 +120,15 @@ window.onload = function () {
                     let fan_span = document.createElement('div');
                     fan_span.className = 'fan';
                     fan_span.innerHTML = 'ファンネーム：' + data["ファンネーム"];
+                    profile.appendChild(fan_span);
+
+                }
+
+                if (data["ファンアートタグ"]) {
+                    //ファンネーム
+                    let fan_span = document.createElement('div');
+                    fan_span.className = 'art';
+                    fan_span.innerHTML = 'ファンアート：' + data["ファンアート"];
                     profile.appendChild(fan_span);
 
                 }
