@@ -144,6 +144,7 @@
     .mark,
     .color,
     .fan,
+    .art,
     .link {
         margin: 0rem 10rem;
         padding: 2rem;
@@ -267,6 +268,7 @@
     .mark,
     .color,
     .fan,
+    .art,
     .link {
         text-align: left;
         font-size: 15rem;
