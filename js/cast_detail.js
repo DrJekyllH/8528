@@ -125,7 +125,7 @@ window.onload = function () {
                 }
 
                 if (data["ファンアートタグ"]) {
-                    //ファンネーム
+                    //ファンアート
                     let fan_span = document.createElement('div');
                     fan_span.className = 'art';
                     fan_span.innerHTML = 'ファンアート：' + data["ファンアート"];
