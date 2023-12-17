@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World 箱庭プロジェクト</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2ca48b5450.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.8528.space/css/style.css">
+    <link rel="stylesheet" href="https://www.8528.space/css/nav.css">
+    <link rel="stylesheet" href="https://www.8528.space/css/world.css">
+    <script src="js/include.js"></script>
+    <script type='text/javascript'>
+        function scroll_effect() {
+            var element = document.getElementsByClassName('scroll-up');
+            if (!element) return;
+
+            var scrollY = window.pageYOffset;
+            var windowH = window.innerHeight;
+            var showTiming = 500; // 要素を表示するタイミング
+            for (var i = 0; i < element.length; i++) {
+                var elemClientRect = element[i].getBoundingClientRect();
+                var elemY = scrollY + elemClientRect.top;
+                if (scrollY > elemY - windowH + showTiming) {
+                    element[i].classList.add('is-show');
+                }
+            }
+        }
+        window.addEventListener('scroll', scroll_effect); // スクロール時に実行
+    </script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <h2>箱庭ワールドの紹介</h2>
+    <div class="content" id="content">
+        <div><img src="./images/intro1.PNG" width="100%"></div>
+        <div class="scroll-up"><img src="./images/intro2.PNG" width="100%"></div>
+        <div class="scroll-up"><img src="./images/intro3.PNG" width="100%"></div>
+        <div class="scroll-up"><img src="./images/intro4.PNG" width="100%"></div>
+        <div class="scroll-up"><img src="./images/intro5.PNG" width="100%"></div>
+        <div class="scroll-up"><img src="./images/intro6.PNG" width="100%"></div>
+        <div class="scroll-up"><img src="./images/intro7.PNG" width="100%"></div>
+        <div class="scroll-up"><img src="./images/intro8.PNG" width="100%"></div>
+    </div>
+    <footer id="footer">
+    </footer>
+</body>
+
+</html>
