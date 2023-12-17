@@ -1,0 +1,49 @@
+#content {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 850px) {
+    #content {
+        width: 80%;
+    }
+
+    .scroll-up {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+        transition: all 1s;
+    }
+
+    .scroll-up.is-show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 849px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+
+    .scroll-up {
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    .scroll-up.is-show {
+        opacity: 1;
+        visibility: visible;
+
+    }
+}
