@@ -201,7 +201,7 @@ window.onload = function () {
                     //ショップ
                     let link_span = document.createElement('span');
                     link_span.className = 'links';
-                    link_span.innerHTML = '<a href="' + data["FANBOX"] + '" target="_blank" rel="noopener noreferrer"><img src="images/fanbox.svg" class="brand_logo"></a>';
+                    link_span.innerHTML = '<a href="' + data["FANBOX"] + '" target="_blank" rel="noopener noreferrer"><img src="images/Pixiv_FANBOX.svg" class="brand_logo"> FANBOX</a>';
                     link.appendChild(link_span);
                 }
                 if (data["fansfer"]) {
