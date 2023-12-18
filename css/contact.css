@@ -1,0 +1,34 @@
+#content {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#for_company_form {
+    display: none;
+}
+
+#for_individual_form {
+    display: none;
+}
+
+@media (min-width: 850px) {
+    #content {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 849px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+
+}
