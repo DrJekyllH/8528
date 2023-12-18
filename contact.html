@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact 箱庭プロジェクト</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2ca48b5450.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.8528.space/css/style.css">
+    <link rel="stylesheet" href="https://www.8528.space/css/nav.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/include.js"></script>
+
+    <script>
+        function check_form() {
+            var value = document.form.type;
+            console.log(value);
+            if (value[0].checked) {
+                //企業様用
+                document.getElementById("for_company_form").style.display = "flex";
+                document.getElementById("for_individual_form").style.display = "none";
+            }
+            if (value[1].checked) {
+                //個人様用
+                document.getElementById("for_company_form").style.display = "none";
+                document.getElementById("for_individual_form").style.display = "flex";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <h2>お問い合わせ</h2>
+
+    <div>
+        <form name="form">
+            <input type="radio" name="type" value="company" onchange="check_form()">
+            <label for="female">企業様</label>
+            <input type="radio" name="type" value="individual" onchange="check_form()">
+            <label for="male">個人様</label>
+        </form>
+    </div>
+    <div>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScmyJmDqj7lparnj6T63FesPszc1Ok1uBTqSb5heWP2MzovWQ/viewform?embedded=true"
+            width="640" height="1700" frameborder="0" marginheight="0" marginwidth="0"
+            id="for_company_form">読み込んでいます…</iframe>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfYJdmZIwt1P1Mg5btKiwRGuFkqbip-7ZW6yQvZYgWgp-TPpA/viewform?embedded=true"
+            width="640" height="1380" frameborder="0" marginheight="0" marginwidth="0"
+            id="for_individual_form">読み込んでいます…</iframe>
+    </div>
+    <footer id="footer">
+    </footer>
+</body>
+
+</html>
