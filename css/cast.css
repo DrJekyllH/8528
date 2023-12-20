@@ -39,11 +39,6 @@
     flex-wrap: wrap;
 }
 
-#table {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 
 
 
@@ -79,12 +74,14 @@
 
 @media (min-width: 850px) {
     #content {
-        width: 80%;
+        width: 100%;
         margin-left: 10rem;
+        text-align: left;
     }
 
     #content2 {
         width: 100%;
+        justify-content: center;
     }
 
     .back {
@@ -94,7 +91,12 @@
     #container {
         margin: -10rem 0 -10rem 0;
         text-align: center;
+        justify-content: center;
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
     }
 
 
@@ -120,9 +122,15 @@
     }
 
 
+    #table {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
     #table_left {
-        max-width: 450rem;
-        min-width: 150rem;
+
+        margin: 10rem;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -131,9 +139,8 @@
     }
 
     #table_right {
-        max-width: 450rem;
-        min-width: 150rem;
         display: flex;
+        margin: 10rem;
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
@@ -247,6 +254,13 @@
         text-align: left;
         padding: 3rem 3rem;
         font-size: 18rem;
+    }
+
+
+    #table {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     #table_left {
