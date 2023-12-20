@@ -129,7 +129,7 @@
     }
 
     #table_left {
-
+        max-width: 450rem;
         margin: 10rem;
         display: flex;
         justify-content: center;
@@ -139,6 +139,8 @@
     }
 
     #table_right {
+        max-width: 450rem;
+
         display: flex;
         margin: 10rem;
         justify-content: center;
