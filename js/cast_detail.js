@@ -228,6 +228,11 @@ window.onload = function () {
                     intro.appendChild(intro_div);
                 }
                 if (data["立ち絵（背景透過）"]) {
+                    var url = new URL(data["立ち絵（背景透過）"]);
+                    if (url.hostname == "drive.google.com") {
+                        var imageid = url.pathname.split("/");
+                        data["立ち絵（背景透過）"] = "https://drive.google.com/uc?export=view&id=" + imageid[3];
+                    }
                     var img = new Image();
                     img.onload = function () {
                         const loader = document.getElementById('loader');

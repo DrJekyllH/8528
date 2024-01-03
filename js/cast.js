@@ -33,7 +33,11 @@ window.onload = function () {
         .then((response) => {
             var data = JSON.parse(response);
             data.forEach(function (elm) {
-                console.table(elm);
+                var url = new URL(elm["アイコン"]);
+                if (url.hostname == "drive.google.com") {
+                    var imageid = url.pathname.split("/");
+                    elm["アイコン"] = "https://drive.google.com/uc?export=view&id=" + imageid[3];
+                }
                 var div = document.createElement('div');
                 div.className = 'cast_box';
                 div.innerHTML = '<div class="cast_img"><a href="cast_detail.html?id=' + elm["id"] + '"><img src="' + elm["アイコン"] + '" class="cast_icon"></a></div><div class="cast_name">' + elm["名前"] + '</div>';
