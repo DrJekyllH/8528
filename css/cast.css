@@ -134,7 +134,7 @@
     }
 
     #table_left {
-        max-width: 450rem;
+        width: 500rem;
         margin: 10rem;
         display: flex;
         justify-content: center;
@@ -144,7 +144,7 @@
     }
 
     #table_right {
-        width: 500rem;
+        width: 400rem;
         display: flex;
         margin: 10rem;
 
