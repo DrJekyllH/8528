@@ -53,13 +53,13 @@
 }
 
 .shorts-thumbnail {
-    width: 224px;
-    height: 401px;
+    width: 347px;
+    height: 194px;
     object-fit: cover;
 }
 
 .shorts-container {
-    width: 224px;
+    width: 347px;
 }
 
 @media (min-width: 770px) {
