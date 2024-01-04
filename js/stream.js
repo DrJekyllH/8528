@@ -90,7 +90,6 @@ window.onload = function () {
                         cont_class = "shorts-container";
                         urlformat = "https://www.youtube.com/shorts/";
                         sch = "";
-                        if (elm.title.length > 18) elm.title = elm.title.substr(0, 16) + '…';
                         break;
                     case "none":
                     default:
