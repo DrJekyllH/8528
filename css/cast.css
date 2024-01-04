@@ -147,9 +147,10 @@
         width: 500rem;
         display: flex;
         margin: 10rem;
-        justify-content: center;
+
         flex-direction: column;
         flex-wrap: wrap;
+        align-items: flex-start;
     }
 
     .birthday,
