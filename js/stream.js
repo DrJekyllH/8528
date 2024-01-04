@@ -70,14 +70,6 @@ window.onload = function () {
                         urlformat = "https://www.youtube.com/watch?v=";
                         sch = `<span style="position: absolute; top:5rem; left:0rem; background-color: rgba(200,200,200,0.9); padding: 0rem 2rem 0rem 2rem; font-size: 12rem;">` + elm.schedule + ` 予定</span>`;
                         break;
-                    case "shorts":
-                        var parentbox = shorts;
-                        var plf_icon = '<i class="fa-brands fa-youtube" style="color: #ff0000;"></i>';
-                        img_class = "shorts-thumbnail";
-                        cont_class = "shorts-container";
-                        urlformat = "https://www.youtube.com/shorts/";
-                        sch = "";
-                        break;
                     case "live":
                         var parentbox = live;
                         img_class = "video-thumbnail";
@@ -90,6 +82,15 @@ window.onload = function () {
                             urlformat = "https://www.youtube.com/watch?v=";
                         }
                         sch = "";
+                        break;
+                    case "shorts":
+                        var parentbox = shorts;
+                        var plf_icon = '<i class="fa-brands fa-youtube" style="color: #ff0000;"></i>';
+                        img_class = "shorts-thumbnail";
+                        cont_class = "shorts-container";
+                        urlformat = "https://www.youtube.com/shorts/";
+                        sch = "";
+                        if (elm.title.length > 18) elm.title = elm.title.substr(0, 16) + '…';
                         break;
                     case "none":
                     default:
