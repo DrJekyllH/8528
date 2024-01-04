@@ -180,7 +180,7 @@ window.onload = function () {
                     //X
                     let link_span = document.createElement('span');
                     link_span.className = 'links';
-                    link_span.innerHTML = '<a href="' + data["X"] + '" target="_blank" rel="noopener noreferrer"><img src="images/Twitter-X-App-Logo.svg" class="brand_logo"> X（旧Twitter）</a>';
+                    link_span.innerHTML = '<a href="' + data["X"] + '" target="_blank" rel="noopener noreferrer"><img src="images/Twitter-X-App-Logo.svg" class="brand_logo"> X</a>';
                     link.appendChild(link_span);
                 }
                 if (data["マシュマロ"]) {
